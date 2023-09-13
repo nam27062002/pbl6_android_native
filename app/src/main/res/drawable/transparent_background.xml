@@ -1,0 +1,5 @@
+<!-- transparent_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/transparent" /> <!-- Đặt màu nền trong suốt -->
+    <corners android:radius="0dp" /> <!-- Đặt border radius là 0dp -->
+</shape>
