@@ -139,14 +139,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot password?"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="@id/outline_input_password"
         app:layout_constraintTop_toBottomOf="@id/outline_input_password"
         android:textSize="14sp"
         android:textStyle="bold"
         android:textColor="@color/link"
         tools:ignore="MissingConstraints" />
-
+    <TextView
+        android:id="@+id/text_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The password is not incorrect!"
+        android:textSize="14sp"
+        android:textColor="@color/red"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/outline_input_password"
+        app:layout_constraintTop_toBottomOf="@id/outline_input_password"
+        tools:ignore="MissingConstraints" />
     <Button
         android:id="@+id/button_sign_in"
         android:layout_width="0dp"
@@ -156,9 +166,9 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="18sp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/custom_button_background"
-        app:layout_constraintTop_toBottomOf="@id/text_forgetpassword"
+        app:layout_constraintTop_toBottomOf="@id/box"
         app:layout_constraintStart_toStartOf="@id/outline_input_password"
         app:layout_constraintEnd_toEndOf="@id/outline_input_password"
         tools:ignore="MissingConstraints" />
@@ -326,4 +336,6 @@
         app:layout_constraintTop_toTopOf="@id/form_bottom_button"
         android:background="@drawable/transparent_background"
         />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
