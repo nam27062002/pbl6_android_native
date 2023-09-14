@@ -41,18 +41,9 @@ public class RectangleCreator {
         }
     }
 
-    public void incrementTarget() {
-        if (target < size) {
-            target++;
-            createRectangles();
-        }
-    }
-
-    public void decrementTarget() {
-        if (target > 0) {
-            target--;
-            createRectangles();
-        }
+    public void changeTarget(int target) {
+        this.target = target;
+        createRectangles();
     }
 
     public Boolean isTargetEnd() {

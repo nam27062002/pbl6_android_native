@@ -52,7 +52,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-light"
         android:gravity="center"
-        android:text="Request a ride get picked up by a nearby community driver"
+        android:text="Request a ride get picked up by a nearby community driver111"
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
