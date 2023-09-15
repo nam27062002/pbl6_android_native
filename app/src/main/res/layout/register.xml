@@ -146,6 +146,17 @@
         android:layout_gravity="center_vertical"
         android:background="@drawable/transparent_background"
         android:inputType="textPassword" />
+    <TextView
+        android:id="@+id/text_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The password is not incorrect!"
+        android:textSize="14sp"
+        android:textColor="@color/red"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/outline_input_password"
+        app:layout_constraintTop_toBottomOf="@id/outline_input_password"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button_eye"

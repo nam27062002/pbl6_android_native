@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -27,12 +29,11 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     private TextView textError;
     private ImageView imageEye;
     private LoginController loginController;
-
+    Animation clickAnimation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-
         inputEmail = findViewById(R.id.input_email);
         inputPassword = findViewById(R.id.input_password);
         outline_input_email = findViewById(R.id.outline_input_email);
@@ -43,11 +44,12 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         textError = findViewById(R.id.text_error);
         imageEye = findViewById(R.id.image_eye);
         loginController = new LoginController(this);
-
+        clickAnimation = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
         clearValidationError();
         buttonSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                view.startAnimation(clickAnimation);
                 String email = inputEmail.getText().toString();
                 String password = inputPassword.getText().toString();
                 User user = new User(email, password);

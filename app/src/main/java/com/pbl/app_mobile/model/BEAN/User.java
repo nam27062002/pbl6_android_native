@@ -1,6 +1,7 @@
 package com.pbl.app_mobile.model.BEAN;
 
 public class User {
+    private String name;
     private String email;
     private String password;
 
@@ -8,7 +9,13 @@ public class User {
         this.email = email;
         this.password = password;
     }
+    public User(String email, String password,String name) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+    }
 
+    public String getName() {return name;}
     public String getEmail() {
         return email;
     }
