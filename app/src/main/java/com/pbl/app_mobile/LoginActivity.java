@@ -1,8 +1,10 @@
 package com.pbl.app_mobile;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -10,8 +12,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.pbl.app_mobile.controller.LoginController;
 import com.pbl.app_mobile.model.BEAN.User;
 import com.pbl.app_mobile.view.LoginView;
@@ -26,6 +32,8 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     private Button buttonSignIn;
     private Button buttonEye;
     private Button buttonRegister;
+    private Button buttonLoginWithGoogle;
+    private Button buttonLoginWithFb;
     private TextView textError;
     private ImageView imageEye;
     private LoginController loginController;
@@ -41,9 +49,11 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         buttonSignIn = findViewById(R.id.button_sign_in);
         buttonEye = findViewById(R.id.button_eye);
         buttonRegister = findViewById(R.id.button_register);
+        buttonLoginWithGoogle = findViewById(R.id.button_google);
+        buttonLoginWithFb = findViewById(R.id.button_facebook);
         textError = findViewById(R.id.text_error);
         imageEye = findViewById(R.id.image_eye);
-        loginController = new LoginController(this);
+        loginController = new LoginController(this,this);
         clickAnimation = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
         clearValidationError();
         buttonSignIn.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +66,21 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
                 loginController.validateCredentials(user);
             }
         });
+
+        buttonLoginWithGoogle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loginController.signInWithGoogle();
+            }
+        });
+
+        buttonLoginWithFb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loginController.signOutWithGoogle(LoginActivity.this);
+            }
+        });
+
         buttonEye.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -130,6 +155,24 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
             imageEye.setImageResource(R.drawable.hide);
             inputPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         }
+    }
+
+    @Override
+    public void signInWithGoogle(GoogleSignInClient gsc) {
+        Intent signInIntent = gsc.getSignInIntent();
+        startActivityForResult(signInIntent,1000);
+    }
+
+    @Override
+    public void setMessageLoginWithGoogle(String message) {
+        Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
+    }
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode,Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        loginController.signInWithGoogle(requestCode,data);
     }
 
 
