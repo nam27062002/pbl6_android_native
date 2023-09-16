@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements WelcomeView {
 
     @Override
     public void navigateToLogin() {
-        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        Intent intent = new Intent(MainActivity.this, HomeActivity.class);
         startActivity(intent);
     }
 
