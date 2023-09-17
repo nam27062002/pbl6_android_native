@@ -129,7 +129,7 @@
         android:background="@drawable/round_border"
         android:orientation="vertical"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="146dp">
+        tools:layout_editor_absoluteY="135dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -353,7 +353,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/ssnpp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="22dp"
         android:layout_marginEnd="24dp"
         android:orientation="vertical"
@@ -447,27 +447,124 @@
         </LinearLayout>
 
     </LinearLayout>
+
     <Button
         android:id="@+id/logout"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        app:layout_constraintTop_toBottomOf="@+id/wsa"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginEnd="24dp"
-
-        android:text="Logout"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:textColor="@color/white"
-        android:letterSpacing="0.01"
-
-        android:elevation="10dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/logout"
 
-        tools:ignore="MissingConstraints"
+        android:elevation="10dp"
+        android:letterSpacing="0.01"
+        android:text="Logout"
+        android:textColor="@color/white"
+        android:textSize="20sp"
 
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/wsa"
+
+        tools:ignore="HardcodedText,MissingConstraints"
         />
 
+    <LinearLayout
+        android:id="@+id/task_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:layout_marginStart="1.2dp"
+        android:layout_marginEnd="1.5dp"
+        android:background="@drawable/task_menu"
+        android:orientation="horizontal"
+        android:padding="11dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/logout">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/home"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/menu_n"
+                android:text="@string/home"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/order"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/menu_n"
+                android:text="@string/order"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/history"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/menu_n"
+                android:text="@string/history"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/menu"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/menu_y"
+                android:text="@string/menu"/>
+
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
