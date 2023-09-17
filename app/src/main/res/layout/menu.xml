@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/blue_light"
     android:theme="@android:style/Theme.Light"
     tools:context=".LoginActivity">
 
@@ -17,45 +17,381 @@
     <View
         android:layout_width="326dp"
         android:layout_height="14dp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="6dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="6dp" />
+
     <TextView
-        android:layout_width="26dp"
+        android:layout_width="wrap_content"
         android:layout_height="21dp"
-        tools:layout_editor_absoluteX="26.8dp"
-        tools:layout_editor_absoluteY="4.5dp"
-        android:text="@string/time"
-        android:textAppearance="@style/time"
         android:elevation="1dp"
         android:gravity="top"
+        android:text="@string/time"
+        android:textAppearance="@style/time"
         android:textColor="@color/black"
-        tools:ignore="MissingConstraints" />
-    <View
-        android:layout_width="17dp"
-        android:layout_height="10.666667dp"
-        android:elevation="2sp"
-        tools:layout_editor_absoluteX="259dp"
-        tools:layout_editor_absoluteY="6dp"
-        android:background="@drawable/song"
         tools:ignore="MissingConstraints"
-        />
+        tools:layout_editor_absoluteX="26.8dp"
+        tools:layout_editor_absoluteY="4.5dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/CellularConnection"
+        android:elevation="1sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="289dp"
+        tools:layout_editor_absoluteY="2.17dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wifi"
+        android:elevation="1sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="311dp"
+        tools:layout_editor_absoluteY="1.83dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/battery"
+        android:elevation="1sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="332dp"
+        tools:layout_editor_absoluteY="2.33dp" />
+
     <View
         android:id="@+id/rectangle_8"
         android:layout_width="match_parent"
         android:layout_height="128dp"
 
         android:background="@drawable/rectangle_8"
-        tools:ignore="MissingConstraints"
-        />
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/avatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/avatar"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="46dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="46dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+
+        android:textAppearance="@style/name"
+        tools:ignore="MissingConstraints"
+
+        tools:layout_editor_absoluteX="103dp"
+
+        tools:layout_editor_absoluteY="52dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/type_m"
+        android:textAppearance="@style/type_m"
+
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="103dp"
+
+        tools:layout_editor_absoluteY="87.56dp"
+
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="124dp"
+
+        android:layout_height="62.58dp"
+        android:background="@color/deep_green"
+        android:paddingLeft="90dp"
+        android:text="@string/bton"
+
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="251dp"
+
+        tools:layout_editor_absoluteY="54dp" />
+
+    <LinearLayout
+        android:id="@+id/ssnpp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="22dp"
+        android:background="@drawable/round_border"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="146dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="19sp"
+                android:background="@drawable/settings"
+                android:elevation="1sp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="302dp"
+                tools:layout_editor_absoluteY="2.33dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="23.83dp"
+                android:text="@string/setting"
+                android:textAppearance="@style/txt_menu" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:layout_marginLeft="124.25dp"
+                android:background="@color/white"
+                android:paddingLeft="90dp"
+                android:text="@string/bton"
+                android:textColor="#4B545A"
+                android:textSize="25dp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="19sp"
+                android:background="@drawable/message"
+                android:elevation="1sp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="302dp"
+                tools:layout_editor_absoluteY="2.33dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="23.83dp"
+                android:text="@string/support"
+                android:textAppearance="@style/txt_menu" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:layout_marginLeft="117dp"
+
+                android:background="@color/white"
+                android:paddingLeft="90dp"
+                android:text="@string/bton"
+                android:textColor="#4B545A"
+                android:textSize="25dp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="19sp"
+                android:background="@drawable/notification"
+                android:elevation="1sp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="302dp"
+                tools:layout_editor_absoluteY="2.33dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="23.83dp"
+                android:text="@string/notification"
+                android:textAppearance="@style/txt_menu" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:layout_marginLeft="81dp"
+                android:background="@color/white"
+                android:paddingLeft="90dp"
+                android:text="@string/bton"
+                android:textColor="#4B545A"
+                android:textSize="25dp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="19sp"
+                android:background="@drawable/credit_card"
+                android:elevation="1sp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="302dp"
+                tools:layout_editor_absoluteY="2.33dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="23.83dp"
+                android:text="@string/pay"
+                android:textAppearance="@style/txt_menu" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:layout_marginLeft="111dp"
+                android:background="@color/white"
+                android:paddingLeft="90dp"
+                android:text="@string/bton"
+                android:textColor="#4B545A"
+                android:textSize="25dp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="19sp"
+                android:background="@drawable/code"
+                android:elevation="1sp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="302dp"
+                tools:layout_editor_absoluteY="2.33dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="23.83dp"
+                android:text="@string/promo_code"
+                android:textAppearance="@style/txt_menu" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:layout_marginLeft="84dp"
+                android:background="@color/white"
+                android:paddingLeft="90dp"
+                android:text="@string/bton"
+                android:textColor="#4B545A"
+                android:textSize="25dp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints"
+
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/ssnpp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical"
+
+        android:background="@drawable/round_border"
+        android:elevation="10dp"
+
+        tools:ignore="MissingConstraints"
+        >
+
+        <LinearLayout
+            android:id="@+id/work"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="23.83dp"
+                android:text="@string/promo_code"
+                android:textAppearance="@style/txt_menu" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+
+                android:background="@color/white"
+                android:paddingLeft="90dp"
+                android:text="@string/bton"
+                android:textColor="#4B545A"
+                android:textSize="25dp"
+                android:textStyle="bold"
+
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">App_Mobile</string>
     <string name="time">19:45</string>
+    <string name="name">Larry Davis</string>
+    <string name="type_m">Gold Member</string>
+    <string name="bton">&gt;</string>
+    <string name="setting">Setting</string>
+    <string name="support">Support</string>
+    <string name="notification">Notifications</string>
+    <string name="pay">Payment</string>
+    <string name="promo_code">Promo Code</string>
+    <string name="work">Work as a driver</string>
+    <string name="share_a">Share this app</string>
+    <string name="about">About</string>
+
 </resources>
