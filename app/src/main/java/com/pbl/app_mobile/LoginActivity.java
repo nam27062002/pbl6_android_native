@@ -15,12 +15,26 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.facebook.AccessToken;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
+import com.facebook.login.LoginManager;
+import com.facebook.login.LoginResult;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.gson.JsonIOException;
 import com.pbl.app_mobile.controller.LoginController;
 import com.pbl.app_mobile.model.BEAN.User;
 import com.pbl.app_mobile.view.LoginView;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Arrays;
 
 
 public class LoginActivity extends AppCompatActivity implements LoginView {
@@ -38,6 +52,10 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     private ImageView imageEye;
     private LoginController loginController;
     Animation clickAnimation;
+
+
+    // FB
+    CallbackManager callbackManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +74,48 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         loginController = new LoginController(this,this);
         clickAnimation = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
         clearValidationError();
+        // FB
+        callbackManager = CallbackManager.Factory.create();
+
+        LoginManager.getInstance().registerCallback(callbackManager,
+                new FacebookCallback<LoginResult>() {
+                    @Override
+                    public void onSuccess(LoginResult loginResult) {
+                        GraphRequest request = GraphRequest.newMeRequest(
+                                loginResult.getAccessToken(),
+                                new GraphRequest.GraphJSONObjectCallback() {
+                                    @Override
+                                    public void onCompleted(JSONObject object, GraphResponse response) {
+                                        try {
+                                            String userName = object.optString("name");
+                                            String id = object.optString("id");
+                                            String avatarUrl = object.getJSONObject("picture").getJSONObject("data").getString("url");
+                                            System.out.println(avatarUrl);
+                                            Toast.makeText(getApplicationContext(),avatarUrl, Toast.LENGTH_SHORT).show();
+                                        } catch (JSONException e) {
+                                            throw new RuntimeException(e);
+                                        }
+                                    }
+                                });
+
+
+                        Bundle parameters = new Bundle();
+                        parameters.putString("fields", "picture.type(large)");
+                        request.setParameters(parameters);
+                        request.executeAsync();
+                    }
+
+                    @Override
+                    public void onCancel() {
+                        // Xử lý khi người dùng hủy đăng nhập.
+                    }
+
+                    @Override
+                    public void onError(FacebookException exception) {
+                        // Xử lý khi có lỗi xảy ra.
+                    }
+                });
+
         buttonSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,7 +137,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         buttonLoginWithFb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loginController.signOutWithGoogle(LoginActivity.this);
+                LoginManager.getInstance().logInWithReadPermissions(LoginActivity.this, Arrays.asList("public_profile"));
             }
         });
 
@@ -168,12 +228,16 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
     }
 
-
     @Override
-    public void onActivityResult(int requestCode, int resultCode,Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        callbackManager.onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
-        loginController.signInWithGoogle(requestCode,data);
     }
 
+//    @Override
+//    public void onActivityResult(int requestCode, int resultCode,Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        loginController.signInWithGoogle(requestCode,data);
+//    }
 
 }

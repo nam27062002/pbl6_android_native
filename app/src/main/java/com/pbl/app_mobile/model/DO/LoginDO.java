@@ -5,6 +5,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
+import com.facebook.login.LoginManager;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -63,5 +64,8 @@ public class LoginDO {
                 loginController.messageLoginWithGoogle("signed out");
             }
         });
+    }
+    public void logOutWithFacebook(){
+        LoginManager.getInstance().logOut();
     }
 }

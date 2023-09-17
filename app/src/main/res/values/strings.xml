@@ -1,3 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <resources>
-    <string name="app_name">App_Mobile</string>
+    <string name="app_name">AuthPBL6</string>
+    <string name="default_notification_channel_id">com.pbl.app_mobile</string>
+    <string name="facebook_app_id">688449289836840</string>
+    <string name="fb_login_protocol_scheme">fb688449289836840</string>
+    <string name="facebook_client_token">e7f1042774cf8d792875e90472fb539a</string>
 </resources>
