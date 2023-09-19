@@ -16,5 +16,11 @@
     <string name="order">Order</string>
     <string name="history">History</string>
     <string name="menu">Menu</string>
-
+<!--    ____________________________- -->
+    <string name="txt_change">Change password</string>
+    <string name="current_p">CURRENT PASSWORD</string>
+    <string name="new_p">NEW PASSWORD</string>
+    <string name="fail_p">Wrong password</string>
+    <string name="re_e_p">RE-ENTER PASSWORD</string>
+    <string name="holder">Email or phone number</string>
 </resources>
