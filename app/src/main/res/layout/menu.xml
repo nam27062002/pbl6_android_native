@@ -8,443 +8,529 @@
     android:theme="@android:style/Theme.Light"
     tools:context=".LoginActivity">
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        tools:ignore="MissingConstraints" />
-
-    <View
-        android:layout_width="326dp"
-        android:layout_height="14dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="6dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="21dp"
-        android:elevation="1dp"
-        android:gravity="top"
-        android:text="@string/time"
-        android:textAppearance="@style/time"
-        android:textColor="@color/black"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="26.8dp"
-        tools:layout_editor_absoluteY="4.5dp" />
-
-    <ImageView
+    <LinearLayout
+        android:id="@+id/top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/CellularConnection"
-        android:elevation="1sp"
+        android:orientation="horizontal"
+        android:translationZ="1dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="289dp"
-        tools:layout_editor_absoluteY="2.17dp" />
+        tools:layout_editor_absoluteY="0dp">
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time"
+            android:textAppearance="@style/time"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints"
+            />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/wifi"
-        android:elevation="1sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="311dp"
-        tools:layout_editor_absoluteY="1.83dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="233dp"
+            android:orientation="horizontal">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/battery"
-        android:elevation="1sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="332dp"
-        tools:layout_editor_absoluteY="2.33dp" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/CellularConnection"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/wifi"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/battery"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+    </LinearLayout>
 
     <View
         android:id="@+id/rectangle_8"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-
         android:background="@drawable/rectangle_8"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/avatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_8"
+        app:layout_constraintStart_toStartOf="@id/rectangle_8"
+        app:layout_constraintTop_toBottomOf="@+id/top"
         app:srcCompat="@drawable/avatar"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="44dp" />
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/name"
-
         android:textAppearance="@style/name"
-        tools:ignore="MissingConstraints"
-
-        tools:layout_editor_absoluteX="103dp"
-
-        tools:layout_editor_absoluteY="50dp" />
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginBottom="34.33dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_8"
+        app:layout_constraintStart_toEndOf="@+id/avatar"
+        app:layout_constraintTop_toBottomOf="@+id/top"
+        tools:ignore="MissingConstraints" />
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/type_m"
+
         android:textAppearance="@style/type_m"
-
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="103dp"
-
-        tools:layout_editor_absoluteY="85.56dp"
-
-        />
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="9dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_8"
+        app:layout_constraintStart_toEndOf="@+id/avatar"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="124dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/accessory"
 
-        android:layout_height="62.58dp"
-        android:background="@color/deep_green"
-        android:paddingStart="90dp"
-        android:text="@string/bton"
-
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints,RtlSymmetry"
-        tools:layout_editor_absoluteX="251dp"
-
-        tools:layout_editor_absoluteY="52dp" />
+        android:layout_marginStart="251dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="11.42dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle_8"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_8"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_8"
+        app:layout_constraintTop_toBottomOf="@+id/top"
+        tools:ignore="MissingConstraints,RtlSymmetry" />
 
     <LinearLayout
         android:id="@+id/ssnpp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="22dp"
         android:background="@drawable/round_border"
         android:orientation="vertical"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="135dp">
 
-        <LinearLayout
+        android:layout_marginTop="23dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBaseline_toTopOf="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_8"
+        app:layout_constraintBottom_toTopOf="@id/wsa"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/set"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:orientation="horizontal"
             tools:ignore="MissingConstraints">
 
             <ImageView
+                android:id="@+id/imgset"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="19sp"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="10dp"
                 android:background="@drawable/settings"
-                android:elevation="1sp"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="302dp"
-                tools:layout_editor_absoluteY="2.33dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtset"
+                tools:ignore="MissingConstraints" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/txtset"
+                android:layout_width="191.84dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="23.83dp"
                 android:text="@string/setting"
-                android:textAppearance="@style/txt_menu" />
+                android:textAppearance="@style/txt_menu"
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-
-                android:layout_marginStart="124.25dp"
-                android:background="@color/white"
-                android:paddingStart="90dp"
-                android:text="@string/bton"
-                android:textColor="#4B545A"
-                android:textSize="25sp"
-                android:textStyle="bold"
-
-                tools:ignore="MissingConstraints,RtlSymmetry"
-
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgset"
+                app:layout_constraintEnd_toStartOf="@+id/btset"
                 />
 
-        </LinearLayout>
+            <Button
+                android:id="@+id/btset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arrow_right"
 
-        <LinearLayout
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="75dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txtset"
+
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sup"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:orientation="horizontal"
             tools:ignore="MissingConstraints">
 
             <ImageView
+                android:id="@+id/imgsup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="19sp"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="10dp"
                 android:background="@drawable/message"
-                android:elevation="1sp"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="302dp"
-                tools:layout_editor_absoluteY="2.33dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtsup"
+                tools:ignore="MissingConstraints" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/txtsup"
+                android:layout_width="191.84dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="23.83dp"
                 android:text="@string/support"
-                android:textAppearance="@style/txt_menu" />
+                android:textAppearance="@style/txt_menu"
+
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgsup"
+                app:layout_constraintEnd_toStartOf="@+id/btsup" />
 
             <Button
+                android:id="@+id/btsup"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arrow_right"
 
-                android:layout_marginStart="117dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="75dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txtsup"
 
-                android:background="@color/white"
-                android:paddingStart="90dp"
-                android:text="@string/bton"
-                android:textColor="#4B545A"
-                android:textSize="25sp"
-                android:textStyle="bold"
-
-                tools:ignore="MissingConstraints,RtlSymmetry"
-
+                tools:ignore="MissingConstraints"
                 />
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/noti"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:orientation="horizontal"
             tools:ignore="MissingConstraints">
 
             <ImageView
+                android:id="@+id/imgnoti"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="19sp"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="10dp"
                 android:background="@drawable/notification"
-                android:elevation="1sp"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="302dp"
-                tools:layout_editor_absoluteY="2.33dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtnoti"
+                tools:ignore="MissingConstraints" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/txtnoti"
+                android:layout_width="191.84dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="23.83dp"
                 android:text="@string/notification"
-                android:textAppearance="@style/txt_menu" />
+                android:textAppearance="@style/txt_menu"
+
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgnoti"
+                app:layout_constraintEnd_toStartOf="@+id/btnoti" />
 
             <Button
+                android:id="@+id/btnoti"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arrow_right"
 
-                android:layout_marginStart="81dp"
-                android:background="@color/white"
-                android:paddingStart="90dp"
-                android:text="@string/bton"
-                android:textColor="#4B545A"
-                android:textSize="25sp"
-                android:textStyle="bold"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="75dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txtnoti"
 
-                tools:ignore="MissingConstraints,RtlSymmetry"
-
+                tools:ignore="MissingConstraints"
                 />
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pay"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:orientation="horizontal"
             tools:ignore="MissingConstraints">
 
             <ImageView
+                android:id="@+id/imgpay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="19sp"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="10dp"
                 android:background="@drawable/credit_card"
-                android:elevation="1sp"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="302dp"
-                tools:layout_editor_absoluteY="2.33dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtpay"
+                tools:ignore="MissingConstraints" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/txtpay"
+                android:layout_width="191.84dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="23.83dp"
                 android:text="@string/pay"
-                android:textAppearance="@style/txt_menu" />
+                android:textAppearance="@style/txt_menu"
+
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgpay"
+                app:layout_constraintEnd_toStartOf="@+id/btpay" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-
-                android:layout_marginStart="111dp"
-                android:background="@color/white"
-                android:paddingStart="90dp"
-                android:text="@string/bton"
-                android:textColor="#4B545A"
-                android:textSize="25sp"
-                android:textStyle="bold"
-
-                tools:ignore="MissingConstraints,RtlSymmetry"
-
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:orientation="horizontal"
-            tools:ignore="MissingConstraints">
-
-            <ImageView
+                android:id="@+id/btpay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="19sp"
-                android:background="@drawable/code"
-                android:elevation="1sp"
+                android:background="@drawable/arrow_right"
+
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="75dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txtpay"
+
                 tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="302dp"
-                tools:layout_editor_absoluteY="2.33dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="23.83dp"
-                android:text="@string/promo_code"
-                android:textAppearance="@style/txt_menu" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-
-                android:layout_marginStart="84dp"
-                android:background="@color/white"
-                android:paddingStart="90dp"
-                android:text="@string/bton"
-                android:textColor="#4B545A"
-                android:textSize="25sp"
-                android:textStyle="bold"
-
-                tools:ignore="MissingConstraints,RtlSymmetry"
-
                 />
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>  <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pro"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imgpro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/code"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txtpro"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txtpro"
+            android:layout_width="191.84dp"
+            android:layout_height="wrap_content"
+            android:text="@string/promo_code"
+            android:textAppearance="@style/txt_menu"
+
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgpro"
+            app:layout_constraintEnd_toStartOf="@+id/btpro" />
+
+        <Button
+            android:id="@+id/btpro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arrow_right"
+
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="75dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txtpro"
+
+            tools:ignore="MissingConstraints"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/wsa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/ssnpp"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginEnd="24dp"
-        android:orientation="vertical"
 
+        app:layout_constraintTop_toBottomOf="@+id/ssnpp"
+        app:layout_constraintBottom_toTopOf="@+id/logout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
         android:background="@drawable/round_border"
         android:elevation="10dp"
-
         tools:ignore="MissingConstraints"
         >
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/work"
             android:layout_width="match_parent"
-            android:layout_height="48dp">
+            android:layout_height="48dp"
+            >
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/txtwork"
+                android:layout_width="226dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="23.83dp"
                 android:text="@string/work"
-                android:textAppearance="@style/txt_menu" />
+                android:textAppearance="@style/txt_menu"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="71dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
 
             <Button
+                android:id="@+id/btwork"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_share"
+                android:layout_marginStart="71dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txtwork"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
-                android:layout_marginStart="97dp"
-                android:background="@color/white"
-                android:paddingStart="90dp"
-                android:text="@string/bton"
-                android:textColor="#4B545A"
-                android:textSize="25sp"
-                android:textStyle="bold"
-
-                tools:ignore="RtlSymmetry" />
-        </LinearLayout>
-        <LinearLayout
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/share_a"
             android:layout_width="match_parent"
-            android:layout_height="48dp">
+            android:layout_height="48dp"
+            >
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/txtshare_a"
+                android:layout_width="226dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="23.83dp"
                 android:text="@string/share_a"
-                android:textAppearance="@style/txt_menu" />
+                android:textAppearance="@style/txt_menu"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="71dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-
-                android:layout_marginStart="108dp"
-                android:background="@color/white"
-                android:paddingStart="90dp"
-                android:text="@string/bton"
-                android:textColor="#4B545A"
-                android:textSize="25sp"
-                android:textStyle="bold"
-
-                tools:ignore="RtlSymmetry" />
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/about"
-            android:layout_width="match_parent"
-            android:layout_height="48dp">
-
-            <TextView
+                android:id="@+id/btshare_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="23.83dp"
-                android:text="@string/about"
-                android:textAppearance="@style/txt_menu" />
+                android:background="@drawable/icon_share"
+                android:layout_marginStart="71dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txtshare_a"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+        </androidx.constraintlayout.widget.ConstraintLayout><androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        >
 
-                android:layout_marginStart="169dp"
-                android:background="@color/white"
-                android:paddingStart="90dp"
-                android:text="@string/bton"
-                android:textColor="#4B545A"
-                android:textSize="25sp"
-                android:textStyle="bold"
+        <TextView
+            android:id="@+id/txtabout"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:text="@string/about"
+            android:textAppearance="@style/txt_menu"
 
-                tools:ignore="RtlSymmetry" />
-        </LinearLayout>
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+        <TextView
+            android:id="@+id/txtversion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/version"
+            android:text="@string/version"
+            android:layout_marginStart="0dp"
+            app:layout_constraintStart_toEndOf="@id/txtabout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+        </TextView>
+
+        <Button
+            android:id="@+id/btabout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arrow_right"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txtversion"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 
@@ -452,9 +538,6 @@
         android:id="@+id/logout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
         android:background="@drawable/logout"
 
         android:elevation="10dp"
@@ -462,107 +545,121 @@
         android:text="Logout"
         android:textColor="@color/white"
         android:textSize="20sp"
-
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/wsa"
 
-        tools:ignore="HardcodedText,MissingConstraints"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/wsa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/task_menu"
+
         />
 
     <LinearLayout
         android:id="@+id/task_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="34dp"
-        android:layout_marginStart="1.2dp"
-        android:layout_marginEnd="1.5dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+
         android:background="@drawable/task_menu"
+
         android:orientation="horizontal"
         android:padding="11dp"
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logout">
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/home"
-                />
+                android:background="@drawable/home" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:textAppearance="@style/menu_n"
-                android:text="@string/home"/>
+                android:text="@string/home"
+                android:textAppearance="@style/menu_n" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/order"
-                />
+                android:background="@drawable/order" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:textAppearance="@style/menu_n"
-                android:text="@string/order"/>
+                android:text="@string/order"
+                android:textAppearance="@style/menu_n" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/history"
-                />
+                android:background="@drawable/history" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:textAppearance="@style/menu_n"
-                android:text="@string/history"/>
+                android:text="@string/history"
+                android:textAppearance="@style/menu_n" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/menu"
-                />
+                android:background="@drawable/menu" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:textAppearance="@style/menu_y"
-                android:text="@string/menu"/>
+                android:text="@string/menu"
+                android:textAppearance="@style/menu_y" />
 
         </LinearLayout>
     </LinearLayout>
