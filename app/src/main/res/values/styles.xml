@@ -3,37 +3,40 @@
     <style name="time">
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/black</item>
-    </style>
-    <style name="icon">
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/Poppins_Regular</item>
     </style>
     <style name="name">
         <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/Poppins_Regular</item>
     </style>
     <style name="type_m">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/Poppins_Regular</item>
     </style>
     <style name="txt_menu">
         <item name="android:textColor">#4B545A</item>
         <item name="android:textSize">17sp</item>
         <item name="android:letterSpacing">-0.02</item>
+        <item name="android:fontFamily">@font/Inter_Regular</item>
     </style>
     <style name="version">
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">#A2A7C4</item>
+        <item name="android:fontFamily">@font/Inter_Regular</item>
     </style>
     <style name="menu_n">
-        <item name="android:textColor">#3E4958</item>
+        <item name="android:textColor">@color/white</item>
         <item name="android:textSize">12sp</item>
         <item name="android:letterSpacing">0.02</item>
+        <item name="android:fontFamily">@font/Inter_Regular</item>
     </style>
     <style name="menu_y">
-        <item name="android:textColor">#0472D8</item>
+        <item name="android:textColor">#FFB800</item>
         <item name="android:textSize">12sp</item>
         <item name="android:letterSpacing">0.02</item>
+        <item name="android:fontFamily">@font/Inter_Regular</item>
     </style>
 </resources>
