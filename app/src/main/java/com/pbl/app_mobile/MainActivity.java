@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements WelcomeView {
     private LinearLayout linearLayout;
     Animation clickAnimation;
     private WelcomeController welcomeController;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
