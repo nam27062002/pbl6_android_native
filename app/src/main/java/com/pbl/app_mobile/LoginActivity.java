@@ -51,6 +51,8 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     private TextView textError;
     private ImageView imageEye;
     private LoginController loginController;
+    private TextView textPlaceholderEmail;
+    private TextView textPlaceholderPassword;
     Animation clickAnimation;
 
 
@@ -71,8 +73,11 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         buttonLoginWithFb = findViewById(R.id.button_facebook);
         textError = findViewById(R.id.text_error);
         imageEye = findViewById(R.id.image_eye);
+        textPlaceholderEmail = findViewById(R.id.textPlaceholderEmail);
+        textPlaceholderPassword = findViewById(R.id.textPlaceholderPassword);
         loginController = new LoginController(this,this);
         clickAnimation = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
+
         clearValidationError();
         // FB
         callbackManager = CallbackManager.Factory.create();
@@ -161,7 +166,6 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
                 loginController.eventFocusEmail(hasFocus);
             }
         });
-
         inputPassword.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
@@ -191,8 +195,12 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     public void eventFocusEmail(boolean hasFocus) {
         if (hasFocus) {
             outline_input_email.setBackgroundResource(R.drawable.blue_input_backgroud);
+            textPlaceholderEmail.setText("");
         } else {
             outline_input_email.setBackgroundResource(R.drawable.white_input_backgroud);
+            if (inputEmail.getText().toString().isEmpty()){
+                textPlaceholderEmail.setText("Email or phone number");
+            }
         }
     }
 
@@ -200,8 +208,12 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     public void eventFocusPassword(boolean hasFocus) {
         if (hasFocus) {
             outline_input_password.setBackgroundResource(R.drawable.blue_input_backgroud);
+            textPlaceholderPassword.setText("");
         } else {
             outline_input_password.setBackgroundResource(R.drawable.white_input_backgroud);
+            if (inputPassword.getText().toString().isEmpty()){
+                textPlaceholderPassword.setText("Enter your password");
+            }
         }
     }
 

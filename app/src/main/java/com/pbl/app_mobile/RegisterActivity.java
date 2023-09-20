@@ -1,12 +1,18 @@
 package com.pbl.app_mobile;
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.InputType;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,16 +27,25 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
     EditText inputName;
     EditText inputEmail;
     EditText inputPassword;
+    EditText inputPhoneNumber;
     View outline_input_email;
     View outline_input_name;
     View outline_input_password;
+    View outline_input_phonenumber;
     Button buttonSignin;
     Button buttonSignUp;
     Button buttonEye;
     ImageView imageEye;
+    TextView placeholderName;
+    TextView placeholderEmail;
+    TextView placeholderPhonenumber;
+    TextView placeholderPassword;
     private TextView textError;
     RegisterController registerController;
+    ImageButton radioButton;
+    TextView textRadio;
     Animation clickAnimation;
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,8 +62,25 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
         buttonSignUp = findViewById(R.id.button_sign_up);
         imageEye = findViewById(R.id.image_eye);
         textError = findViewById(R.id.text_error);
+        outline_input_phonenumber = findViewById(R.id.outline_input_phonenumber);
+        inputPhoneNumber = findViewById(R.id.input_phonenumber);
+        placeholderName = findViewById(R.id.textPlaceholderName);
+        placeholderEmail = findViewById(R.id.textPlaceholderEmail);
+        placeholderPhonenumber = findViewById(R.id.textPlaceholderPhonenumber);
+        placeholderPassword = findViewById(R.id.textPlaceholderPassword);
+        textRadio = findViewById(R.id.text_radio);
+        radioButton = findViewById(R.id.radioButton);
         clickAnimation = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
         clearValidationError();
+        String fullText = "By signing up you agree to the Terms of service and Privacy policy";
+        SpannableString spannableString = new SpannableString(fullText);
+        int startIndex = fullText.indexOf("Terms of service");
+        int endIndex = startIndex + "Terms of service".length();
+        spannableString.setSpan(new ForegroundColorSpan(R.color.yellow), startIndex, endIndex, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        startIndex = fullText.indexOf("Privacy policy");
+        endIndex = startIndex + "Privacy policy".length();
+        spannableString.setSpan(new ForegroundColorSpan(R.color.yellow), startIndex, endIndex, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        textRadio.setText(spannableString);
         buttonSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,7 +88,8 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
                 String name = inputName.getText().toString();
                 String email = inputEmail.getText().toString();
                 String password = inputPassword.getText().toString();
-                User user = new User(email, password, name);
+                String phoneNumber = inputPhoneNumber.getText().toString();
+                User user = new User(email, password, name,phoneNumber);
                 registerController.validateCredentials(user);
             }
         });
@@ -91,6 +124,18 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
                 registerController.eventFocusPassword(hasFocus);
             }
         });
+        inputPhoneNumber.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                registerController.eventFocusPhoneNumber(hasFocus);
+            }
+        });
+        radioButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                registerController.onRadioButtonClicked();
+            }
+        });
     }
 
     @Override
@@ -103,8 +148,12 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
     public void eventFocusName(boolean hasFocus) {
         if (hasFocus) {
             outline_input_name.setBackgroundResource(R.drawable.blue_input_backgroud);
+            placeholderName.setText("");
         } else {
             outline_input_name.setBackgroundResource(R.drawable.white_input_backgroud);
+            if (inputName.getText().toString().isEmpty()){
+                placeholderName.setText("Fullname");
+            }
         }
     }
 
@@ -112,8 +161,12 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
     public void eventFocusEmail(boolean hasFocus) {
         if (hasFocus) {
             outline_input_email.setBackgroundResource(R.drawable.blue_input_backgroud);
+            placeholderEmail.setText("");
         } else {
             outline_input_email.setBackgroundResource(R.drawable.white_input_backgroud);
+            if (inputEmail.getText().toString().isEmpty()){
+                placeholderName.setText("Email or phone number");
+            }
         }
     }
 
@@ -121,8 +174,25 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
     public void eventFocusPassword(boolean hasFocus) {
         if (hasFocus) {
             outline_input_password.setBackgroundResource(R.drawable.blue_input_backgroud);
+            placeholderPassword.setText("");
         } else {
             outline_input_password.setBackgroundResource(R.drawable.white_input_backgroud);
+            if (inputPassword.getText().toString().isEmpty()){
+                placeholderPassword.setText("Enter your password");
+            }
+        }
+    }
+
+    @Override
+    public void eventFocusPhoneNumber(boolean hasFocus) {
+        if (hasFocus) {
+            outline_input_phonenumber.setBackgroundResource(R.drawable.blue_input_backgroud);
+            placeholderPhonenumber.setText("");
+        } else {
+            outline_input_phonenumber.setBackgroundResource(R.drawable.white_input_backgroud);
+            if (inputPhoneNumber.getText().toString().isEmpty()){
+                placeholderPhonenumber.setText("Your mobile number");
+            }
         }
     }
 
@@ -145,5 +215,10 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
     @Override
     public void clearValidationError() {
         textError.setText("");
+    }
+
+    @Override
+    public void setRadioButton(boolean check) {
+        radioButton.setBackgroundResource(check ? R.drawable._check_circle : R.drawable._circle);
     }
 }

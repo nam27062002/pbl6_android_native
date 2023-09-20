@@ -22,7 +22,6 @@ import com.pbl.app_mobile.view.WelcomeView;
 
 public class MainActivity extends AppCompatActivity implements WelcomeView {
 
-
     private RectangleCreator rectangleCreator;
     private GestureDetector gestureDetector;
 
