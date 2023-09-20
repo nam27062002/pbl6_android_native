@@ -133,6 +133,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_border"
         android:orientation="vertical"
+        android:elevation="10dp"
 
         android:layout_marginTop="23dp"
         android:layout_marginStart="13dp"

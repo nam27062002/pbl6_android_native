@@ -23,4 +23,16 @@
     <string name="fail_p">Wrong password</string>
     <string name="re_e_p">RE-ENTER PASSWORD</string>
     <string name="holder">Email or phone number</string>
+<!--    ________________________________-->
+    <string name="txt_setting">Setting</string>
+    <string name="region">Region</string>
+    <string name="location">Da Nang, Viet Nam</string>
+    <string name="language">Language</string>
+    <string name="select_language">English</string>
+    <string name="change_p">Change Password</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="contact">Contact Us</string>
+    <string name="term_o_u">Term of use</string>
+    <string name="delete_a">Delete Account</string>
+    <string name="geolocation">Geolocation</string>
 </resources>

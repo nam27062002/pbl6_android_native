@@ -40,7 +40,7 @@
         <item name="android:fontFamily">@font/Inter_Regular</item>
     </style>
 <!--    _________________________-->
-    <style name="txt_change">
+    <style name="txt_tittle">
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:fontFamily">@font/PTSans_Bold</item>
@@ -60,4 +60,33 @@
         <item name="android:textSize">16sp</item>
         <item name="android:fontFamily">@font/Poppins_Bold</item>
     </style>
+<!--    ______________________________________________-->
+    <style name="tittle_task_s">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/Inter_Regular</item>
+    </style>
+    <style name="location">
+        <item name="android:textColor">#3C3C4399</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/Inter_Regular</item>
+    </style>
+    <style name="select_language">
+        <item name="android:textColor">#3C3C4399</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:fontFamily">@font/Inter_Regular</item>
+    </style>
+    <style name="delete_a">
+        <item name="android:textColor">#EB001B</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/Inter_Regular</item>
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- ... Các thiết lập khác ... -->
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
+
+
 </resources>
