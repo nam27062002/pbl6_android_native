@@ -35,4 +35,7 @@
     <string name="term_o_u">Term of use</string>
     <string name="delete_a">Delete Account</string>
     <string name="geolocation">Geolocation</string>
+<!--    ______________________________________________-->
+    <string name="verification">Verification email or phone number</string>
+    <string name="send_otp">Send OTP</string>
 </resources>
