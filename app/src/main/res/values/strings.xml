@@ -50,4 +50,9 @@
     <string name="didn_t_rece" tools:ignore="StringEscaping">Didn't receive code?</string>
     <string name="resend">Resend again</string>
     <string name="bt_verify">Verify</string>
+    <string name="set_new_p">Set New Password</string>
+    <string name="set_new_your_p">Set new your password</string>
+    <string name="holder_your_new_p">Enter Your New Password</string>
+    <string name="holder_confirm_p">Confirm Password</string>
+    <string name="save">Save</string>
 </resources>
