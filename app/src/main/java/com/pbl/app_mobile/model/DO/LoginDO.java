@@ -48,6 +48,7 @@ public class LoginDO {
             try {
                 GoogleSignInAccount account = task.getResult(ApiException.class);
                 loginController.messageLoginWithGoogle(account.getDisplayName().toString() + "\n" + account.getEmail());
+                loginController.navigateToRegisterAuth();
             } catch (ApiException e) {
                 loginController.messageLoginWithGoogle("something went wrong");
             }

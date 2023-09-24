@@ -13,4 +13,5 @@ public interface LoginView {
     void showHidePassword(boolean isActive);
     void signInWithGoogle(GoogleSignInClient gsc);
     void setMessageLoginWithGoogle(String message);
+    void navigateToRegisterAuth();
 }

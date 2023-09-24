@@ -53,8 +53,8 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     private LoginController loginController;
     private TextView textPlaceholderEmail;
     private TextView textPlaceholderPassword;
+    private boolean isLoginWithGoogle = false;
     Animation clickAnimation;
-
 
     // FB
     CallbackManager callbackManager;
@@ -79,6 +79,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         clickAnimation = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
 
         clearValidationError();
+//      loginController.signOutWithGoogle(this);
         // FB
         callbackManager = CallbackManager.Factory.create();
 
@@ -95,8 +96,8 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
                                             String userName = object.optString("name");
                                             String id = object.optString("id");
                                             String avatarUrl = object.getJSONObject("picture").getJSONObject("data").getString("url");
-                                            System.out.println(avatarUrl);
                                             Toast.makeText(getApplicationContext(),avatarUrl, Toast.LENGTH_SHORT).show();
+                                            navigateToRegisterAuth();
                                         } catch (JSONException e) {
                                             throw new RuntimeException(e);
                                         }
@@ -112,12 +113,12 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
 
                     @Override
                     public void onCancel() {
-                        // Xử lý khi người dùng hủy đăng nhập.
+
                     }
 
                     @Override
                     public void onError(FacebookException exception) {
-                        // Xử lý khi có lỗi xảy ra.
+
                     }
                 });
 
@@ -135,6 +136,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         buttonLoginWithGoogle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                isLoginWithGoogle = true;
                 loginController.signInWithGoogle();
             }
         });
@@ -142,6 +144,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         buttonLoginWithFb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                isLoginWithGoogle = false;
                 LoginManager.getInstance().logInWithReadPermissions(LoginActivity.this, Arrays.asList("public_profile"));
             }
         });
@@ -241,16 +244,20 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        callbackManager.onActivityResult(requestCode, resultCode, data);
-        super.onActivityResult(requestCode, resultCode, data);
+    public void navigateToRegisterAuth() {
+        Intent intent = new Intent(LoginActivity.this, RegisterAuthActivity.class);
+        startActivity(intent);
     }
 
-//    @Override
-//    public void onActivityResult(int requestCode, int resultCode,Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        loginController.signInWithGoogle(requestCode,data);
-//    }
-
-
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (isLoginWithGoogle) {
+            super.onActivityResult(requestCode, resultCode, data);
+            loginController.signInWithGoogle(requestCode,data);
+        }
+        else{
+            callbackManager.onActivityResult(requestCode, resultCode, data);
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+    }
 }

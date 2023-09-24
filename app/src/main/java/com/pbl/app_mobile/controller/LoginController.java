@@ -53,4 +53,7 @@ public class LoginController {
     public void signOutWithGoogle(Activity activity){
         loginDO.signOutWithGoogle(activity);
     }
+    public void navigateToRegisterAuth(){
+        view.navigateToRegisterAuth();
+    }
 }
