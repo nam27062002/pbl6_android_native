@@ -73,6 +73,8 @@
         android:id="@+id/avatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
         android:layout_marginStart="19dp"
         android:layout_marginTop="18dp"
         android:layout_marginBottom="10dp"
@@ -88,8 +90,8 @@
         android:layout_height="wrap_content"
         android:text="@string/name"
         android:textAppearance="@style/name"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
         android:layout_marginBottom="34.33dp"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_8"
         app:layout_constraintStart_toEndOf="@+id/avatar"
@@ -103,9 +105,9 @@
         android:text="@string/type_m"
 
         android:textAppearance="@style/type_m"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="9dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_8"
         app:layout_constraintStart_toEndOf="@+id/avatar"
         app:layout_constraintTop_toBottomOf="@+id/textView"
@@ -136,8 +138,8 @@
         android:elevation="10dp"
 
         android:layout_marginTop="23dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginEnd="15dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
         app:layout_constraintBaseline_toTopOf="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -195,7 +197,13 @@
                 tools:ignore="MissingConstraints" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#3C3C434D"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="15dp"
+            />
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/sup"
             android:layout_width="match_parent"
@@ -247,7 +255,13 @@
                 />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#3C3C434D"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="15dp"
+            />
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/noti"
             android:layout_width="match_parent"
@@ -299,7 +313,13 @@
                 />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#3C3C434D"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="15dp"
+            />
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/pay"
             android:layout_width="match_parent"
@@ -350,57 +370,65 @@
                 tools:ignore="MissingConstraints"
                 />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>  <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/pro"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:orientation="horizontal"
-        tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:id="@+id/imgpro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/code"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/txtpro"
-            tools:ignore="MissingConstraints" />
-
-        <TextView
-            android:id="@+id/txtpro"
-            android:layout_width="191.84dp"
-            android:layout_height="wrap_content"
-            android:text="@string/promo_code"
-            android:textAppearance="@style/txt_menu"
-
-            android:layout_marginStart="10dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/imgpro"
-            app:layout_constraintEnd_toStartOf="@+id/btpro" />
-
-        <Button
-            android:id="@+id/btpro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/arrow_right"
-
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="75dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/txtpro"
-
-            tools:ignore="MissingConstraints"
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#3C3C434D"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="15dp"
             />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pro"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/imgpro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/code"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtpro"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/txtpro"
+                android:layout_width="191.84dp"
+                android:layout_height="wrap_content"
+                android:text="@string/promo_code"
+                android:textAppearance="@style/txt_menu"
+
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgpro"
+                app:layout_constraintEnd_toStartOf="@+id/btpro" />
+
+            <Button
+                android:id="@+id/btpro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arrow_right"
+
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="75dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txtpro"
+
+                tools:ignore="MissingConstraints"
+                />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -455,6 +483,12 @@
                 app:layout_constraintEnd_toEndOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#3C3C434D"
+            android:layout_marginStart="16dp"
+            />
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/share_a"
             android:layout_width="match_parent"
@@ -487,7 +521,14 @@
                 app:layout_constraintStart_toEndOf="@id/txtshare_a"
                 app:layout_constraintEnd_toEndOf="parent"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout><androidx.constraintlayout.widget.ConstraintLayout
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#3C3C434D"
+            android:layout_marginStart="16dp"
+            />
+        <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/about"
         android:layout_width="match_parent"
         android:layout_height="48dp"

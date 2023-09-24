@@ -1,32 +1,42 @@
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-        <Switch
-            android:id="@+id/switchYesNo"
-            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Hàng 1 -->
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+            android:text="Nội dung hàng 1" />
+
         <View
-            android:id="@+id/home_indica"
-            android:layout_width="134dp"
-            android:layout_height="5dp"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/home_indica"
-            />
-        <!-- drawable/home_indica.xml -->
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+        android:background="#000000"
+        />
+
+        <!-- Hàng 2 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nội dung hàng 2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000000" />
+
+        <!-- Thêm các hàng khác tương tự nếu cần -->
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Lớp 2 (Nó sẽ hiển thị phía trên lớp 1 vì có độ cao (z-index) lớn hơn) -->
+
+</RelativeLayout>
