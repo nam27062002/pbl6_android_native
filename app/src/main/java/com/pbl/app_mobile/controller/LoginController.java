@@ -56,4 +56,7 @@ public class LoginController {
     public void navigateToRegisterAuth(){
         view.navigateToRegisterAuth();
     }
+    public void signOutWithFB(){
+        loginDO.logOutWithFacebook();
+    }
 }
