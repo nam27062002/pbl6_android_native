@@ -4,19 +4,19 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiManager {
-    private static final String BASE_URL = "http://27.69.251.31:9000/";
+    private static String BASE_URL = "http://27.69.251.31:9000/";
 
     private static ApiManager instance;
     private Retrofit retrofit;
 
     private ApiManager() {
-        Retrofit retrofit = new Retrofit.Builder()
+        retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
     }
 
-    public static synchronized ApiManager getInstance() {
+    public static ApiManager getInstance() {
         if (instance == null) {
             instance = new ApiManager();
         }
@@ -24,6 +24,10 @@ public class ApiManager {
     }
 
     public <T> T createService(Class<T> serviceClass) {
-        return retrofit.create(serviceClass);
+        if (retrofit != null) {
+            return retrofit.create(serviceClass);
+        } else {
+            throw new IllegalStateException("Retrofit instance is not initialized.");
+        }
     }
 }

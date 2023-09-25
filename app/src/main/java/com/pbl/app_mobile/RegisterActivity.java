@@ -145,6 +145,12 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
     }
 
     @Override
+    public void navigateToHome() {
+        Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
     public void eventFocusName(boolean hasFocus) {
         if (hasFocus) {
             outline_input_name.setBackgroundResource(R.drawable.blue_input_backgroud);
