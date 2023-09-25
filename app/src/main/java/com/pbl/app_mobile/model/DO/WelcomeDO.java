@@ -17,18 +17,18 @@ public class WelcomeDO {
     }
     public void SetCurrentUI(){
         welcomeController.setCurrentUI(contentsStartApp,size);
-        SetContentUI();
+        SetContentUI(false);
     }
-    private void SetContentUI(){
-        welcomeController.updateContentPage(contentsStartApp.contentStartApps.get(target),target);
+    private void SetContentUI(boolean check){
+        welcomeController.updateContentPage(contentsStartApp.contentStartApps.get(target),target,check);
     }
-    public void HandleEventSwipeHorizontal(MotionEvent e1, MotionEvent e2){
-        if (e1.getX() - e2.getX() > 50 && target < size - 1) {
+    public void HandleButtonNext(){
+        if (target < size - 1) {
             target++;
-            SetContentUI();
-        } else if (e2.getX() - e1.getX() > 50 && target > 0) {
-            target--;
-            SetContentUI();
+            SetContentUI(false);
+        }
+        else{
+            SetContentUI(true);
         }
     }
 }

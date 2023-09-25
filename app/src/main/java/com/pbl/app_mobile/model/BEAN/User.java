@@ -1,29 +1,39 @@
 package com.pbl.app_mobile.model.BEAN;
 
 public class User {
-    private String name;
-    private String email;
-    private String password;
-    private String phoneNumber;
-
-    public User(String email, String password) {
+    public User(String fullName, String email, String phNo, String password) {
+        this.fullName = fullName;
         this.email = email;
+        this.phNo = phNo;
         this.password = password;
     }
-    public User(String email, String password,String name,String phoneNumber) {
-        this.name = name;
-        this.email = email;
-        this.password = password;
-        this.phoneNumber = phoneNumber;
+
+    private String fullName;
+
+    public String getFullName() {
+        return fullName;
     }
 
-    public String getName() {return name;}
     public String getEmail() {
         return email;
+    }
+
+    public String getPhNo() {
+        return phNo;
     }
 
     public String getPassword() {
         return password;
     }
-    public String getPhoneNumber() {return phoneNumber;}
+
+    private String email;
+    private String phNo;
+    private String password;
+
+
+    public User(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+
 }

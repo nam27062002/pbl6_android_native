@@ -89,7 +89,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
                 String email = inputEmail.getText().toString();
                 String password = inputPassword.getText().toString();
                 String phoneNumber = inputPhoneNumber.getText().toString();
-                User user = new User(email, password, name,phoneNumber);
+                User user = new User(name,email,phoneNumber,password);
                 registerController.validateCredentials(user);
             }
         });
