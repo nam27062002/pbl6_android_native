@@ -79,8 +79,6 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         clickAnimation = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
 
         clearValidationError();
-//      loginController.signOutWithGoogle(this);
-        // FB
         callbackManager = CallbackManager.Factory.create();
 
         LoginManager.getInstance().registerCallback(callbackManager,
@@ -93,12 +91,12 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
                                     @Override
                                     public void onCompleted(JSONObject object, GraphResponse response) {
                                         try {
-                                            String userName = object.optString("name");
+                                            String userName = object.optString("first_name");
                                             String id = object.optString("id");
                                             String avatarUrl = object.getJSONObject("picture").getJSONObject("data").getString("url");
-                                            Toast.makeText(getApplicationContext(),avatarUrl, Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(getApplicationContext(),userName, Toast.LENGTH_SHORT).show();
                                             navigateToRegisterAuth();
-                                        } catch (JSONException e) {
+                                        } catch (Exception e) {
                                             throw new RuntimeException(e);
                                         }
                                     }
