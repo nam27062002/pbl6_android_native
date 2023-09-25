@@ -42,4 +42,7 @@ public class RegisterController {
     public void onRadioButtonClicked(){
         view.setRadioButton(registerDO.getCheck());
     }
+    public void navigateToHome(){
+        view.navigateToHome();
+    }
 }
