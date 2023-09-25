@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity implements WelcomeView {
                 welcomeController.navigateToLogin();
             }
         });
-        setupGestureDetection();
     }
 
     @Override
@@ -62,15 +61,6 @@ public class MainActivity extends AppCompatActivity implements WelcomeView {
 
 
 
-    private void setupGestureDetection() {
-        gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
-            @Override
-            public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-                welcomeController.eventSwipeHorizontal(e1,e2);
-                return super.onFling(e1, e2, velocityX, velocityY);
-            }
-        });
-    }
 
 
     @Override
@@ -92,9 +82,9 @@ public class MainActivity extends AppCompatActivity implements WelcomeView {
         imageView.setImageResource(contentStart.srcIndex);
         rectangleCreator.changeTarget(target);
         if (rectangleCreator.isTargetEnd()) {
-            buttonGetStarted.setVisibility(View.VISIBLE);
+            buttonGetStarted.setText("Get started");
         } else {
-            buttonGetStarted.setVisibility(View.GONE);
+            buttonGetStarted.setText("Next");
         }
     }
 }
