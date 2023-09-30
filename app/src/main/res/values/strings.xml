@@ -55,4 +55,15 @@
     <string name="holder_your_new_p">Enter Your New Password</string>
     <string name="holder_confirm_p">Confirm Password</string>
     <string name="save">Save</string>
+<!--    _______________________________________________________________ -->
+    <string name="my_account">My Account</string>
+    <string name="name_profile">Nate Samson</string>
+    <string name="text_email">nate@email.com</string>
+    <string name="holder_phone"></string>
+<!--    ___________________________________________________________________- -->
+    <string name="about_us">About Us</string>
+    <string name="txt_about">
+        Professional Rideshare Platform. Here we will provide you only interesting content, which you will like very much. We\'re dedicated to providing you the best of Rideshare, with a focus on dependability and Earning. We\'re working to turn our passion for Rideshare into a booming online website. We hope you enjoy our Rideshare as much as we enjoy offering them to you. I will keep posting more important posts on my Website for all of you. Please give your support and love.Professional Rideshare Platform. Here we will provide you only interesting content, which you will like very much. We\'re dedicated to providing you the best of Rideshare, with a focus on dependability and Earning. We\'re working to turn our passion for Rideshare into a booming online website. We hope you enjoy our Rideshare as much as we enjoy offering them to you. I will keep posting more important posts on my Website for all of you. Please give your support and love.
+    </string>
 </resources>
+

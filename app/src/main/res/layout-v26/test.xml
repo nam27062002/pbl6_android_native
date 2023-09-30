@@ -17,5 +17,5 @@
         android:lineSpacingExtra="1sp"
         android:translationY="-0.5sp"
         android:justificationMode="inter_word"
-        tools:ignore="UnusedAttribute" />
+        />
 </RelativeLayout>
