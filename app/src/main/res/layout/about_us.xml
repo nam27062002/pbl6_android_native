@@ -102,6 +102,8 @@
         android:layout_height="wrap_content"
         android:lineSpacingExtra="1sp"
         android:translationY="-0.5sp"
+        android:justificationMode="inter_word"
+
 
         app:layout_constraintTop_toBottomOf="@+id/top_change"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,9 +111,8 @@
         android:layout_marginTop="54dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:textAppearance="@style/txt_about"
+        android:textAppearance="@style/txt_content"
         android:text="@string/txt_about"
-        android:justificationMode="inter_word"
 
         tools:ignore="MissingConstraints,UnusedAttribute" />
 
