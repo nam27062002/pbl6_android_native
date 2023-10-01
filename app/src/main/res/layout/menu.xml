@@ -659,7 +659,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:text="@string/home"
-                android:textAppearance="@style/menu_n" />
+                android:textAppearance="@style/menuno" />
 
         </LinearLayout>
 
@@ -685,7 +685,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:text="@string/order"
-                android:textAppearance="@style/menu_n" />
+                android:textAppearance="@style/menuno" />
 
         </LinearLayout>
 
@@ -711,7 +711,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:text="@string/history"
-                android:textAppearance="@style/menu_n" />
+                android:textAppearance="@style/menuno" />
 
         </LinearLayout>
 
@@ -737,7 +737,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:text="@string/menu"
-                android:textAppearance="@style/menu_y" />
+                android:textAppearance="@style/menuyes" />
 
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

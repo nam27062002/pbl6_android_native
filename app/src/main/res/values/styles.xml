@@ -27,13 +27,13 @@
         <item name="android:textColor">#A2A7C4</item>
         <item name="android:fontFamily">@font/Inter_Regular</item>
     </style>
-    <style name="menu_n">
+    <style name="menuno">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">12sp</item>
         <item name="android:letterSpacing">0.02</item>
         <item name="android:fontFamily">@font/Inter_Regular</item>
     </style>
-    <style name="menu_y">
+    <style name="menuyes">
         <item name="android:textColor">#FFB800</item>
         <item name="android:textSize">12sp</item>
         <item name="android:letterSpacing">0.02</item>
@@ -76,7 +76,7 @@
         <item name="android:textSize">17sp</item>
         <item name="android:fontFamily">@font/Inter_Regular</item>
     </style>
-    <style name="delete_a">
+    <style name="deletea">
         <item name="android:textColor">#EB001B</item>
         <item name="android:textSize">15sp</item>
         <item name="android:fontFamily">@font/Inter_Regular</item>
