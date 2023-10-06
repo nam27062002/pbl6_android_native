@@ -248,6 +248,12 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     }
 
     @Override
+    public void navigateToHome() {
+        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (isLoginWithGoogle) {
             super.onActivityResult(requestCode, resultCode, data);

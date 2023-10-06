@@ -14,4 +14,5 @@ public interface LoginView {
     void signInWithGoogle(GoogleSignInClient gsc);
     void setMessageLoginWithGoogle(String message);
     void navigateToRegisterAuth();
+    void navigateToHome();
 }

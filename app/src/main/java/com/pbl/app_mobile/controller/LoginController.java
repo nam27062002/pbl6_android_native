@@ -59,4 +59,7 @@ public class LoginController {
     public void signOutWithFB(){
         loginDO.logOutWithFacebook();
     }
+    public void navigateToHome(){
+        view.navigateToHome();
+    }
 }
