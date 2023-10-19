@@ -223,7 +223,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="9dp"
-            android:background="@drawable/icon_checked"
+            android:background="@drawable/icon_no_checked"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <Button
@@ -238,7 +238,6 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:fontFamily="@font/Inter_Regular"
 
         android:layout_marginTop="200dp"
         android:layout_marginStart="40dp"

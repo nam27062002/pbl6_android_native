@@ -122,7 +122,6 @@
         android:text="@string/del"
         android:textColor="@color/white"
         android:textSize="16sp"
-        android:fontFamily="@font/Poppins_Regular"
         android:background="@drawable/bt_delete_account"
 
         app:layout_constraintTop_toBottomOf="@+id/txt_delete_a"
