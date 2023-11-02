@@ -16,14 +16,14 @@
     <string name="order">Order</string>
     <string name="history">History</string>
     <string name="menu">Menu</string>
-<!--    ____________________________- -->
+    <!--    ____________________________- -->
     <string name="txt_change">Change password</string>
     <string name="current_p">CURRENT PASSWORD</string>
     <string name="new_p">NEW PASSWORD</string>
     <string name="fail_p">Wrong password</string>
     <string name="re_e_p">RE-ENTER PASSWORD</string>
     <string name="holder">Email or phone number</string>
-<!--    ________________________________-->
+    <!--    ________________________________-->
     <string name="txt_setting">Setting</string>
     <string name="region">Region</string>
     <string name="location">Da Nang, Viet Nam</string>
@@ -35,10 +35,10 @@
     <string name="term_o_u">Term of use</string>
     <string name="delete_a">Delete Account</string>
     <string name="geolocation">Geolocation</string>
-<!--    ______________________________________________-->
+    <!--    ______________________________________________-->
     <string name="verification">Verification email or phone number</string>
     <string name="send_otp">Send OTP</string>
-<!--    ____________________________________________________-->
+    <!--    ____________________________________________________-->
     <string name="forgot_p">Forgot Password</string>
     <string name="tittle_u_verification">Select which contact details should we use to reset your password</string>
     <string name="via_sms">Via SMS</string>
@@ -55,12 +55,12 @@
     <string name="holder_your_new_p">Enter Your New Password</string>
     <string name="holder_confirm_p">Confirm Password</string>
     <string name="save">Save</string>
-<!--    _______________________________________________________________ -->
+    <!--    _______________________________________________________________ -->
     <string name="my_account">My Account</string>
     <string name="name_profile">Nate Samson</string>
     <string name="text_email">nate@email.com</string>
     <string name="holder_phone"></string>
-<!--    ___________________________________________________________________- -->
+    <!--    ___________________________________________________________________- -->
     <string name="about_us">About Us</string>
     <string name="txt_about">
         Professional Rideshare Platform. Here we will provide you only interesting content, which you will like very much. We\'re dedicated to providing you the best of Rideshare, with a focus on dependability and Earning. We\'re working to turn our passion for Rideshare into a booming online website. We hope you enjoy our Rideshare as much as we enjoy offering them to you. I will keep posting more important posts on my Website for all of you. Please give your support and love.Professional Rideshare Platform. Here we will provide you only interesting content, which you will like very much. We\'re dedicated to providing you the best of Rideshare, with a focus on dependability and Earning. We\'re working to turn our passion for Rideshare into a booming online website. We hope you enjoy our Rideshare as much as we enjoy offering them to you. I will keep posting more important posts on my Website for all of you. Please give your support and love.
@@ -79,12 +79,14 @@
     <string name="txt_term_o_u">
         Lorem ipsum dolor sit amet consectetur. Sit pulvinar mauris mauris eu nibh semper nisl pretium laoreet. Sed non faucibus ac lectus eu arcu. Nulla sit congue facilisis vestibulum egestas nisl feugiat pharetra. Odio sit tortor morbi at orci ipsum dapibus interdum. Lorem felis est aliquet arcu nullam pellentesque. Et habitasse ac arcu et nunc euismod rhoncus facilisis sollicitudin.
     </string>
-<!--    ________________________________________________________________________-->
+    <!--    ________________________________________________________________________-->
     <string name="vietnamese">Vietnamese</string>
     <string name="tieng_view">Tiếng Việt</string>
     <string name="default_notification_channel_id">com.pbl.app_mobile</string>
     <string name="facebook_app_id">688449289836840</string>
     <string name="fb_login_protocol_scheme">fb688449289836840</string>
     <string name="facebook_client_token">e7f1042774cf8d792875e90472fb539a</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
 

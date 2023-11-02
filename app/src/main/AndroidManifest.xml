@@ -68,7 +68,7 @@
         </activity>
         <!--HOME-->
         <activity
-            android:name=".HomeActivity"
+            android:name=".ContainerPageActivity"
             android:label="Home"
             android:exported="true">
             <intent-filter>

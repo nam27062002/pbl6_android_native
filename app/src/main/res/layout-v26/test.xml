@@ -13,7 +13,6 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="124dp"
         android:text="@string/txt_about"
-        android:textAppearance="@style/txt_about"
         android:lineSpacingExtra="1sp"
         android:translationY="-0.5sp"
         android:justificationMode="inter_word"
