@@ -1,9 +1,8 @@
 package com.pbl.app_mobile.model.DO;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
-import android.widget.Toast;
-
-import androidx.annotation.NonNull;
+import android.content.SharedPreferences;
 
 import com.facebook.login.LoginManager;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -11,12 +10,12 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.fido.u2f.api.common.RequestParams;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.gson.JsonObject;
 import com.pbl.app_mobile.controller.LoginController;
-import com.pbl.app_mobile.model.BEAN.User;
+import com.pbl.app_mobile.data.User;
+import com.pbl.app_mobile.model.BEAN.User.UserResponse;
 import com.pbl.app_mobile.network.ApiManager;
 import com.pbl.app_mobile.network.ApiService;
 import com.pbl.app_mobile.network.JsonHandle;
@@ -118,20 +117,21 @@ public class LoginDO {
             }
         });
     }
-    private void callApiSignIn(User user){
+    private void callApiSignIn(com.pbl.app_mobile.data.User user){
         ApiService apiService = ApiManager.getInstance().createService(ApiService.class);
         JsonObject paramObject = new JsonObject();
         paramObject.addProperty("username", user.getEmail());
         paramObject.addProperty("password", user.getPassword());
         paramObject.addProperty("type", "email");
-        Call<ResponseBody> call = apiService.signIn(paramObject);
-        call.enqueue(new Callback<ResponseBody>() {
+        Call<UserResponse> call = apiService.signIn(paramObject);
+        call.enqueue(new Callback<UserResponse>() {
             @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+            public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
                 if (response.isSuccessful()) {
                     try {
-                        if (JsonHandle.IsSuccess(response)) {
-
+                        if (response.isSuccessful()) {
+                            com.pbl.app_mobile.model.BEAN.User.User data = response.body().getData().getUser();
+//                            SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
                             loginController.navigateToHome();
                         }
                     } catch (Exception e) {
@@ -139,15 +139,14 @@ public class LoginDO {
                     }
                 } else {
                     try {
-                        loginController.showValidationError(JsonHandle.getMessage(response, true));
+//                        loginController.showValidationError(JsonHandle.getMessage(response, true));
                     } catch (Exception e) {
 
                     }
                 }
             }
-
             @Override
-            public void onFailure(Call<ResponseBody> call, Throwable t) {
+            public void onFailure(Call<UserResponse> call, Throwable t) {
 
             }
         });

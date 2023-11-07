@@ -1,4 +1,4 @@
-package com.pbl.app_mobile.model.BEAN;
+package com.pbl.app_mobile.model.BEAN.Profile;
 
 public class Profile {
     int id;

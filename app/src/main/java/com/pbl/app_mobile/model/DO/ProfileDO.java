@@ -1,6 +1,7 @@
 package com.pbl.app_mobile.model.DO;
 
 import com.google.gson.JsonObject;
+import com.pbl.app_mobile.model.BEAN.User.UserResponse;
 import com.pbl.app_mobile.network.ApiManager;
 import com.pbl.app_mobile.network.ApiService;
 
@@ -21,7 +22,7 @@ public class ProfileDO {
         }
         return instance;
     }
-    public Call<ResponseBody> getProfileById(int id){
+    public Call<UserResponse> getProfileById(int id){
         return apiService.getProfileById(id);
     }
 }

@@ -1,6 +1,6 @@
 package com.pbl.app_mobile.controller;
 
-import com.pbl.app_mobile.model.BEAN.User;
+import com.pbl.app_mobile.model.BEAN.User.User;
 import com.pbl.app_mobile.model.DO.RegisterDO;
 import com.pbl.app_mobile.view.RegisterView;
 

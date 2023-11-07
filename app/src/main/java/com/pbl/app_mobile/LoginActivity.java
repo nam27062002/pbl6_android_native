@@ -23,7 +23,7 @@ import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.pbl.app_mobile.controller.LoginController;
-import com.pbl.app_mobile.model.BEAN.User;
+import com.pbl.app_mobile.data.User;
 import com.pbl.app_mobile.view.LoginView;
 
 import org.json.JSONObject;
