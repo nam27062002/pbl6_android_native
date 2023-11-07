@@ -132,10 +132,10 @@ public class LoginDO {
         paramObject.addProperty("username", user.getEmail());
         paramObject.addProperty("password", user.getPassword());
         paramObject.addProperty("type", "email");
-        Call<UserResponse> call = apiService.signIn(paramObject);
-        call.enqueue(new Callback<UserResponse>() {
+        Call<ResponseBody> call = apiService.signIn(paramObject);
+        call.enqueue(new Callback<ResponseBody>() {
             @Override
-            public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if (response.isSuccessful()) {
                     try {
                         if (IsSuccess(response)) {
@@ -153,15 +153,16 @@ public class LoginDO {
                     }
                 } else {
                     try {
-//                        loginController.showValidationError(JsonHandle.getMessage(response, true));
+                        loginController.showValidationError(JsonHandle.getMessage(response, true));
                     } catch (Exception e) {
 
                         Log.e("error", Objects.requireNonNull(e.getLocalizedMessage()));
                     }
                 }
             }
+
             @Override
-            public void onFailure(Call<UserResponse> call, Throwable t) {
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
 
                 Log.e("error", Objects.requireNonNull(t.getLocalizedMessage()));
             }

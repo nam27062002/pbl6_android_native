@@ -15,7 +15,7 @@ public interface ApiService {
     @POST("/api/v1/users/signup")
     Call<ResponseBody> signUp(@Body User user);
     @POST("/api/v1/users/signin")
-    Call<UserResponse> signIn(@Body JsonObject user);
+    Call<ResponseBody> signIn(@Body JsonObject user);
     @POST("/api/v1/users/login/google")
     Call<ResponseBody> SignInWithGoogle(@Body JsonObject gmail);
     @GET("/api/v1/users/{id}")
