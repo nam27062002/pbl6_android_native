@@ -4,7 +4,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiManager {
-    private static String BASE_URL = "http://27.69.251.31:9000/";
+    private static String BASE_URL = "http://ridewizard.pro:9000/";
 
     private static ApiManager instance;
     private Retrofit retrofit;

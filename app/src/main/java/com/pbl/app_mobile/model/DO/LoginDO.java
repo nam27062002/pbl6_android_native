@@ -131,6 +131,7 @@ public class LoginDO {
                 if (response.isSuccessful()) {
                     try {
                         if (JsonHandle.IsSuccess(response)) {
+
                             loginController.navigateToHome();
                         }
                     } catch (Exception e) {
