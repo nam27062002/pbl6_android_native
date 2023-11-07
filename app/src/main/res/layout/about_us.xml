@@ -6,54 +6,7 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:theme="@android:style/Theme.Light"
-    tools:context=".LoginActivity">
-    <LinearLayout
-        android:id="@+id/top"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:translationZ="1dp"
-        android:layout_marginTop="6dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="0dp">
-        <TextView
-            android:id="@+id/time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/time"
-            android:textAppearance="@style/time"
-            android:textColor="@color/black"
-            tools:ignore="MissingConstraints"
-            />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="233dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/cellular_connection"
-                tools:ignore="MissingConstraints" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/wifi"
-                tools:ignore="MissingConstraints" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/battery"
-                tools:ignore="MissingConstraints" />
-        </LinearLayout>
-    </LinearLayout>
+    tools:context=".AboutUsActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top_change"
@@ -83,7 +36,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="@style/txt_tittle"
-            android:text="@string/about_us"
 
             app:layout_constraintTop_toBottomOf="@+id/top"
             app:layout_constraintStart_toEndOf="@+id/bt_change"
@@ -95,41 +47,13 @@
             android:layout_marginEnd="112.5dp"
             tools:ignore="NotSibling" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-<!--    _____________________________________________________-->
-    <TextView
-        android:id="@+id/txt_about"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:lineSpacingExtra="1sp"
-        android:translationY="-0.5sp"
-        android:justificationMode="inter_word"
-
-
-        app:layout_constraintTop_toBottomOf="@+id/top_change"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="54dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:textAppearance="@style/txt_content"
-        android:text="@string/txt_about"
-
-        tools:ignore="MissingConstraints,UnusedAttribute" />
-
-
-<!--    ________________________________________________-->
-    <View
-        android:id="@+id/home_indica"
-        android:layout_width="134dp"
-        android:layout_height="5dp"
-        android:background="@drawable/home_indica"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toBottomOf="@id/top_change"
+        app:layout_constraintLeft_toLeftOf="@id/top_change"
+        app:layout_constraintRight_toRightOf="@id/top_change"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginStart="130dp"
-        android:layout_marginEnd="129dp"
-        android:layout_marginBottom="8dp"
-
-        tools:ignore="MissingConstraints" />
+        android:mimeType="text/html"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

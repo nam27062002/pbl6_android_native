@@ -12,7 +12,7 @@ import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 public interface ApiService {
-    @POST("api/v1/users/signup")
+    @POST("/api/v1/users/signup")
     Call<ResponseBody> signUp(@Body User user);
     @POST("/api/v1/users/signin")
     Call<UserResponse> signIn(@Body JsonObject user);

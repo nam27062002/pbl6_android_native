@@ -1,8 +1,13 @@
 package com.pbl.app_mobile.model.DO;
+import static com.pbl.app_mobile.network.JsonHandle.IsSuccess;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.util.Log;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 
 import com.facebook.login.LoginManager;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -20,6 +25,8 @@ import com.pbl.app_mobile.network.ApiManager;
 import com.pbl.app_mobile.network.ApiService;
 import com.pbl.app_mobile.network.JsonHandle;
 import com.pbl.app_mobile.utils.EmailValidator;
+
+import java.util.Objects;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -96,7 +103,7 @@ public class LoginDO {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if (response.isSuccessful()) {
                     try {
-                        if (JsonHandle.IsSuccess(response)) {
+                        if (IsSuccess(response)) {
                             loginController.messageLoginWithGoogle(account.getId() + "\n" + account.getEmail());
                             loginController.navigateToRegisterAuth();
                         }
@@ -131,27 +138,32 @@ public class LoginDO {
             public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
                 if (response.isSuccessful()) {
                     try {
-                        if (response.isSuccessful()) {
-                            com.pbl.app_mobile.model.BEAN.User.User data = response.body().getData().getUser();
-                            userId = data.getId().intValue();
-                            accessToken =data.getAccessToken();
-//                            SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                        if (IsSuccess(response)) {
+
+                            // id với accesstoken ở đây
+//
+                            String id = JsonHandle.GetId();
+                            String accessToken = JsonHandle.GetAccessToken();
+                            Log.d("NAMTRAN",id + accessToken);
                             loginController.navigateToHome();
                         }
                     } catch (Exception e) {
 
+                        Log.e("error", Objects.requireNonNull(e.getLocalizedMessage()));
                     }
                 } else {
                     try {
 //                        loginController.showValidationError(JsonHandle.getMessage(response, true));
                     } catch (Exception e) {
 
+                        Log.e("error", Objects.requireNonNull(e.getLocalizedMessage()));
                     }
                 }
             }
             @Override
             public void onFailure(Call<UserResponse> call, Throwable t) {
 
+                Log.e("error", Objects.requireNonNull(t.getLocalizedMessage()));
             }
         });
     }

@@ -29,6 +29,7 @@ import com.pbl.app_mobile.view.LoginView;
 import org.json.JSONObject;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 
 public class LoginActivity extends AppCompatActivity implements LoginView {
@@ -106,11 +107,13 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
                     @Override
                     public void onCancel() {
 
+                        Log.e("error", "onCancel");
                     }
 
                     @Override
                     public void onError(FacebookException exception) {
 
+                        Log.e("error", Objects.requireNonNull(exception.getLocalizedMessage()));
                     }
                 });
 
@@ -258,5 +261,6 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
             callbackManager.onActivityResult(requestCode, resultCode, data);
             super.onActivityResult(requestCode, resultCode, data);
         }
+
     }
 }
