@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_light"
+    android:theme="@android:style/Theme.Light"
+    tools:context=".LoginActivity">
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:translationZ="1dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="0dp">
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time"
+            android:textAppearance="@style/time"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="233dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cellular_connection"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/wifi"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/battery"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/top_setting"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/rectangle_8"/>
+    <Button
+        android:id="@+id/bt_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btleft"
+
+        app:layout_constraintStart_toStartOf="@id/top_setting"
+        app:layout_constraintBottom_toBottomOf="@+id/top_setting"
+        app:layout_constraintTop_toTopOf="@id/top_setting"
+        app:layout_constraintEnd_toEndOf="@+id/top_setting"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="327dp"
+        />
+    <TextView
+        android:id="@+id/txt_change"
+        android:layout_width="237dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/txt_tittle"
+        android:text="@string/txt_setting"
+        android:textAlignment="center"
+
+        app:layout_constraintBottom_toBottomOf="@+id/top_setting"
+        app:layout_constraintEnd_toEndOf="@+id/top_setting"
+        app:layout_constraintTop_toTopOf="@id/top_setting"
+        app:layout_constraintStart_toStartOf="@id/top_setting"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginEnd="69dp" />
+<!--______________________________________________________-->
+    <LinearLayout
+        android:id="@+id/menu_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+
+        app:layout_constraintTop_toBottomOf="@id/top_setting"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/round_border"
+        android:orientation="vertical"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/task_s_1"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+            <ImageView
+                android:id="@+id/img_region"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/local"
+
+                app:layout_constraintStart_toStartOf="@+id/task_s_1"
+                app:layout_constraintTop_toTopOf="@+id/task_s_1"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_1"
+                android:layout_marginStart="16dp"
+                />
+            <TextView
+                android:id="@+id/txt_region"
+                android:layout_width="59.2dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/tittle_task_s"
+                android:text="@string/region"
+
+                app:layout_constraintStart_toEndOf="@+id/img_region"
+                app:layout_constraintTop_toTopOf="@+id/task_s_1"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_1"
+                android:layout_marginStart="22dp"/>
+            <TextView
+                android:id="@+id/txt_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/location"
+                android:text="@string/location"
+
+                app:layout_constraintStart_toEndOf="@id/txt_region"
+                app:layout_constraintTop_toTopOf="@+id/task_s_1"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_1"
+                android:layout_marginStart="75dp"
+                />
+            <Button
+                android:id="@+id/bt_region"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arrow_right"
+
+                app:layout_constraintStart_toEndOf="@id/txt_location"
+                app:layout_constraintEnd_toEndOf="@+id/task_s_1"
+                app:layout_constraintTop_toTopOf="@+id/task_s_1"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_1"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="16dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/task_s_2"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+            <ImageView
+                android:id="@+id/img_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/language"
+
+                app:layout_constraintStart_toStartOf="@+id/task_s_2"
+                app:layout_constraintTop_toTopOf="@+id/task_s_2"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_2"
+                android:layout_marginStart="16dp"
+                />
+            <TextView
+                android:id="@+id/txt_language"
+                android:layout_width="123.83dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/tittle_task_s"
+                android:text="@string/language"
+
+                app:layout_constraintStart_toEndOf="@+id/img_language"
+                app:layout_constraintTop_toTopOf="@+id/task_s_2"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_2"
+                android:layout_marginStart="22dp"/>
+            <TextView
+                android:id="@+id/txt_select_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/select_language"
+                android:text="@string/select_language"
+
+                app:layout_constraintStart_toEndOf="@id/txt_language"
+                app:layout_constraintTop_toTopOf="@+id/task_s_2"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_2"
+                android:layout_marginStart="75dp"
+                />
+            <Button
+                android:id="@+id/bt_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arrow_right"
+
+                app:layout_constraintStart_toEndOf="@id/txt_select_language"
+                app:layout_constraintEnd_toEndOf="@+id/task_s_2"
+                app:layout_constraintTop_toTopOf="@+id/task_s_2"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_2"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="16dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/task_s_3"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+            <ImageView
+                android:id="@+id/img_change_p"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/lock"
+
+                app:layout_constraintStart_toStartOf="@+id/task_s_3"
+                app:layout_constraintTop_toTopOf="@+id/task_s_3"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_3"
+                android:layout_marginStart="16dp"
+                />
+            <TextView
+                android:id="@+id/txt_change_p"
+                android:layout_width="141dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/tittle_task_s"
+                android:text="@string/change_p"
+
+                app:layout_constraintStart_toEndOf="@+id/img_change_p"
+                app:layout_constraintTop_toTopOf="@+id/task_s_3"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_3"
+                android:layout_marginStart="22dp"/>
+
+            <Button
+                android:id="@+id/bt_change_p"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="130dp"
+
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/arrow_right"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_3"
+                app:layout_constraintEnd_toEndOf="@+id/task_s_3"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toEndOf="@id/txt_change_p"
+                app:layout_constraintTop_toTopOf="@+id/task_s_3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/task_s_4"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+            <ImageView
+                android:id="@+id/img_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/protect"
+
+                app:layout_constraintStart_toStartOf="@+id/task_s_4"
+                app:layout_constraintTop_toTopOf="@+id/task_s_4"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_4"
+                android:layout_marginStart="16dp"
+                />
+            <TextView
+                android:id="@+id/txt_privacy"
+                android:layout_width="141dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/tittle_task_s"
+                android:text="@string/privacy"
+
+                app:layout_constraintStart_toEndOf="@+id/img_privacy"
+                app:layout_constraintTop_toTopOf="@+id/task_s_4"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_4"
+                android:layout_marginStart="22dp"/>
+
+            <Button
+                android:id="@+id/bt_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="130dp"
+
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/arrow_right"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_4"
+                app:layout_constraintEnd_toEndOf="@+id/task_s_4"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toEndOf="@id/txt_privacy"
+                app:layout_constraintTop_toTopOf="@+id/task_s_4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/task_s_5"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+            <ImageView
+                android:id="@+id/img_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/email"
+
+                app:layout_constraintStart_toStartOf="@+id/task_s_5"
+                app:layout_constraintTop_toTopOf="@+id/task_s_5"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_5"
+                android:layout_marginStart="16dp"
+                />
+            <TextView
+                android:id="@+id/txt_contact"
+                android:layout_width="141dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/tittle_task_s"
+                android:text="@string/contact"
+
+                app:layout_constraintStart_toEndOf="@+id/img_contact"
+                app:layout_constraintTop_toTopOf="@+id/task_s_5"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_5"
+                android:layout_marginStart="22dp"/>
+
+            <Button
+                android:id="@+id/bt_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="130dp"
+
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/arrow_right"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_5"
+                app:layout_constraintEnd_toEndOf="@+id/task_s_5"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toEndOf="@id/txt_contact"
+                app:layout_constraintTop_toTopOf="@+id/task_s_5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/task_s_6"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+            <ImageView
+                android:id="@+id/img_term"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/question"
+
+                app:layout_constraintStart_toStartOf="@+id/task_s_6"
+                app:layout_constraintTop_toTopOf="@+id/task_s_6"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_6"
+                android:layout_marginStart="16dp"
+                />
+            <TextView
+                android:id="@+id/txt_term"
+                android:layout_width="141dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/tittle_task_s"
+                android:text="@string/term_o_u"
+
+                app:layout_constraintStart_toEndOf="@+id/img_term"
+                app:layout_constraintTop_toTopOf="@+id/task_s_6"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_6"
+                android:layout_marginStart="22dp"/>
+
+            <Button
+                android:id="@+id/bt_term"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="130dp"
+
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/arrow_right"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_6"
+                app:layout_constraintEnd_toEndOf="@+id/task_s_6"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toEndOf="@id/txt_term"
+                app:layout_constraintTop_toTopOf="@+id/task_s_6" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/task_s_7"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+            <ImageView
+                android:id="@+id/img_delete_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/delete"
+
+                app:layout_constraintStart_toStartOf="@+id/task_s_7"
+                app:layout_constraintTop_toTopOf="@+id/task_s_7"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_7"
+                android:layout_marginStart="16dp"
+                />
+            <TextView
+                android:id="@+id/txt_delete_a"
+                android:layout_width="141dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/deletea"
+                android:text="@string/delete_a"
+
+                app:layout_constraintStart_toEndOf="@+id/img_delete_a"
+                app:layout_constraintTop_toTopOf="@+id/task_s_7"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_7"
+                android:layout_marginStart="22dp"/>
+
+            <Button
+                android:id="@+id/bt_delete_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="130dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/arrow_right_red"
+                app:layout_constraintBottom_toBottomOf="@+id/task_s_7"
+                app:layout_constraintEnd_toEndOf="@+id/task_s_7"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toEndOf="@id/txt_delete_a"
+                app:layout_constraintTop_toTopOf="@+id/task_s_7" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/geolocation"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+
+        app:layout_constraintTop_toBottomOf="@+id/menu_setting"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="16dp"
+
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/img_geolocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/geolocation"
+
+            app:layout_constraintStart_toStartOf="@+id/geolocation"
+            app:layout_constraintTop_toTopOf="@+id/geolocation"
+            app:layout_constraintBottom_toBottomOf="@+id/geolocation"
+            android:layout_marginStart="16dp"
+            />
+        <TextView
+            android:id="@+id/txt_geolocation"
+            android:layout_width="141dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/tittle_task_s"
+            android:text="@string/geolocation"
+
+            app:layout_constraintStart_toEndOf="@+id/img_geolocation"
+            app:layout_constraintTop_toTopOf="@+id/geolocation"
+            app:layout_constraintBottom_toBottomOf="@+id/geolocation"
+            android:layout_marginStart="22dp"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/bt_geolocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:thumb="@drawable/thumb_selector"
+            app:track="@drawable/track_selector"
+            android:elevation="4dp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/geolocation"
+            app:layout_constraintEnd_toEndOf="@+id/geolocation"
+            app:layout_constraintStart_toEndOf="@id/txt_geolocation"
+            app:layout_constraintTop_toTopOf="@+id/geolocation"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintHorizontal_bias="0"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--________________________task menu_____________________-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/task_menu"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/task_menu"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <!-- Guideline 1 (25% từ trái) -->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="103dp" />
+
+        <!-- Guideline 2 (50% từ trái) -->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
+
+        <!-- Guideline 3 (75% từ trái) -->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/home" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="@string/home"
+                android:textAppearance="@style/menuno" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/guideline1"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/order" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="@string/order"
+                android:textAppearance="@style/menuno" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/guideline2"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/history" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="@string/history"
+                android:textAppearance="@style/menuno" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/guideline3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/menu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="@string/menu"
+                android:textAppearance="@style/menuyes" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

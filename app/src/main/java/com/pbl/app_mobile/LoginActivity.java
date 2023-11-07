@@ -35,6 +35,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 
 public class LoginActivity extends AppCompatActivity implements LoginView {
@@ -112,11 +113,13 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
                     @Override
                     public void onCancel() {
 
+                        Log.e("error", "onCancel");
                     }
 
                     @Override
                     public void onError(FacebookException exception) {
 
+                        Log.e("error", Objects.requireNonNull(exception.getLocalizedMessage()));
                     }
                 });
 

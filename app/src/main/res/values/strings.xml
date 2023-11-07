@@ -1,8 +1,91 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<resources>
-    <string name="app_name">AuthPBL6</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">App_Mobile</string>
+    <string name="time">19:45</string>
+    <string name="name">Larry Davis</string>
+    <string name="type_m">Fill in your profile info</string>
+    <string name="setting">Setting</string>
+    <string name="support">Support</string>
+    <string name="notification">Notifications</string>
+    <string name="pay">Payment</string>
+    <string name="promo_code">Promo Code</string>
+    <string name="work">Work as a driver</string>
+    <string name="share_a">Share this app</string>
+    <string name="about">About app</string>
+    <string name="version">Version 1.2.0</string>
+    <string name="home">Home</string>
+    <string name="order">Order</string>
+    <string name="history">History</string>
+    <string name="menu">Menu</string>
+<!--    ____________________________- -->
+    <string name="txt_change">Change password</string>
+    <string name="current_p">CURRENT PASSWORD</string>
+    <string name="new_p">NEW PASSWORD</string>
+    <string name="fail_p">Wrong password</string>
+    <string name="re_e_p">RE-ENTER PASSWORD</string>
+    <string name="holder">Email or phone number</string>
+<!--    ________________________________-->
+    <string name="txt_setting">Setting</string>
+    <string name="region">Region</string>
+    <string name="location">Da Nang, Viet Nam</string>
+    <string name="language">Language</string>
+    <string name="select_language">English</string>
+    <string name="change_p">Change Password</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="contact">Contact Us</string>
+    <string name="term_o_u">Term of use</string>
+    <string name="delete_a">Delete Account</string>
+    <string name="geolocation">Geolocation</string>
+<!--    ______________________________________________-->
+    <string name="verification">Verification email or phone number</string>
+    <string name="send_otp">Send OTP</string>
+<!--    ____________________________________________________-->
+    <string name="forgot_p">Forgot Password</string>
+    <string name="tittle_u_verification">Select which contact details should we use to reset your password</string>
+    <string name="via_sms">Via SMS</string>
+    <string name="via_email">Via Email</string>
+    <string name="sms_number">***** ***70</string>
+    <string name="email_address">**** **** **** xyz@xyz.com</string>
+    <string name="bt_continue">Continue</string>
+    <string name="tittle_send_code">Code has been send to ***** ***70</string>
+    <string name="re_receive" tools:ignore="StringEscaping">Did\'t receive code?</string>
+    <string name="resend">Resend again</string>
+    <string name="bt_verify">Verify</string>
+    <string name="set_new_p">Set New Password</string>
+    <string name="set_new_your_p">Set new your password</string>
+    <string name="holder_your_new_p">Enter Your New Password</string>
+    <string name="holder_confirm_p">Confirm Password</string>
+    <string name="save">Save</string>
+<!--    _______________________________________________________________ -->
+    <string name="my_account">My Account</string>
+    <string name="name_profile">Nate Samson</string>
+    <string name="text_email">nate@email.com</string>
+    <string name="holder_phone"></string>
+<!--    ___________________________________________________________________- -->
+    <string name="about_us">About Us</string>
+    <string name="txt_about">
+        Professional Rideshare Platform. Here we will provide you only interesting content, which you will like very much. We\'re dedicated to providing you the best of Rideshare, with a focus on dependability and Earning. We\'re working to turn our passion for Rideshare into a booming online website. We hope you enjoy our Rideshare as much as we enjoy offering them to you. I will keep posting more important posts on my Website for all of you. Please give your support and love.Professional Rideshare Platform. Here we will provide you only interesting content, which you will like very much. We\'re dedicated to providing you the best of Rideshare, with a focus on dependability and Earning. We\'re working to turn our passion for Rideshare into a booming online website. We hope you enjoy our Rideshare as much as we enjoy offering them to you. I will keep posting more important posts on my Website for all of you. Please give your support and love.
+    </string>
+
+    <string name="tittle_txt_privacy">Privacy Policy for Ride share</string>
+    <string name="txt_privacy">
+        At Rideshare, accessible from rideshare.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by rideshare and how we use it.\n\nIf you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.\n\nThis Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in rideshare. This policy is not applicable to any information collected offline or via channels other than this website. Our Privacy Policy was created with the help of the Free Privacy Policy Generator.
+    </string>
+
+    <string name="txt_delete_account">
+        Are you sure you want to delete your account? Please read how account deletion will affect.\nDeleting your account removes personal information our database. Tour email becomes permanently reserved and same email cannot be re-use to register a new account.
+    </string>
+    <string name="del">Delete</string>
+
+    <string name="txt_term_o_u">
+        Lorem ipsum dolor sit amet consectetur. Sit pulvinar mauris mauris eu nibh semper nisl pretium laoreet. Sed non faucibus ac lectus eu arcu. Nulla sit congue facilisis vestibulum egestas nisl feugiat pharetra. Odio sit tortor morbi at orci ipsum dapibus interdum. Lorem felis est aliquet arcu nullam pellentesque. Et habitasse ac arcu et nunc euismod rhoncus facilisis sollicitudin.
+    </string>
+<!--    ________________________________________________________________________-->
+    <string name="vietnamese">Vietnamese</string>
+    <string name="tieng_view">Tiếng Việt</string>
     <string name="default_notification_channel_id">com.pbl.app_mobile</string>
     <string name="facebook_app_id">688449289836840</string>
     <string name="fb_login_protocol_scheme">fb688449289836840</string>
     <string name="facebook_client_token">e7f1042774cf8d792875e90472fb539a</string>
 </resources>
+

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="time">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+<!--        <item name="android:fontFamily">@font/Poppins_Regular</item>-->
+    </style>
+    <style name="name">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+<!--        <item name="android:fontFamily">@font/Poppins_Regular</item>-->
+    </style>
+    <style name="type_m">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+<!--        <item name="android:fontFamily">@font/Poppins_Regular</item>-->
+    </style>
+    <style name="txt_menu">
+        <item name="android:textColor">#4B545A</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+<!--        <item name="android:fontFamily">@font/Inter_Regular</item>-->
+    </style>
+    <style name="version">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#A2A7C4</item>
+<!--        <item name="android:fontFamily">@font/Inter_Regular</item>-->
+    </style>
+    <style name="menuno">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.02</item>
+<!--        <item name="android:fontFamily">@font/Inter_Regular</item>-->
+    </style>
+    <style name="menuyes">
+        <item name="android:textColor">#FFB800</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0.02</item>
+<!--        <item name="android:fontFamily">@font/Inter_Regular</item>-->
+    </style>
+<!--    _________________________-->
+    <style name="txt_tittle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+<!--        <item name="android:fontFamily">@font/PTSans_Bold</item>-->
+    </style>
+    <style name="tittle">
+        <item name="android:textColor">#3E4958</item>
+        <item name="android:textSize">13sp</item>
+<!--        <item name="android:fontFamily">@font/PTSans_Bold</item>-->
+    </style>
+    <style name="txt_fail">
+        <item name="android:textColor">#FD4B4B</item>
+        <item name="android:textSize">13sp</item>
+<!--        <item name="android:fontFamily">@font/Poppins_Bold</item>-->
+    </style>
+    <style name="txt_holder">
+        <item name="android:textColor">#D0D0D0</item>
+        <item name="android:textSize">16sp</item>
+<!--        <item name="android:fontFamily">@font/Poppins_Bold</item>-->
+    </style>
+<!--    ______________________________________________-->
+    <style name="tittle_task_s">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">15sp</item>
+<!--        <item name="android:fontFamily">@font/Inter_Regular</item>-->
+    </style>
+    <style name="location">
+        <item name="android:textColor">#3C3C4399</item>
+        <item name="android:textSize">14sp</item>
+<!--        <item name="android:fontFamily">@font/Inter_Regular</item>-->
+    </style>
+    <style name="select_language">
+        <item name="android:textColor">#3C3C4399</item>
+        <item name="android:textSize">17sp</item>
+<!--        <item name="android:fontFamily">@font/Inter_Regular</item>-->
+    </style>
+    <style name="deletea">
+        <item name="android:textColor">#EB001B</item>
+        <item name="android:textSize">15sp</item>
+<!--        <item name="android:fontFamily">@font/Inter_Regular</item>-->
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- ... Các thiết lập khác ... -->
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+<!--_______________________________________________- -->
+    <style name="verification">
+        <item name="android:textColor">#2A2A2A</item>
+        <item name="android:textSize">24sp</item>
+<!--        <item name="android:fontFamily">@font/Poppins_Black</item>-->
+    </style>
+    <style name="email_holder">
+        <item name="android:textColor">#D0D0D0</item>
+        <item name="android:textSize">16sp</item>
+<!--        <item name="android:fontFamily">@font/Poppins_Regular</item>-->
+    </style>
+<!--_______________________________________________________-->
+    <style name="tittle_u_verification">
+        <item name="android:textColor">#A0A0A0</item>
+        <item name="android:textSize">16sp</item>
+<!--        <item name="android:fontFamily">@font/Poppins_Regular</item>-->
+    </style>
+    <style name="via">
+        <item name="android:textColor">#B8B8B8</item>
+        <item name="android:textSize">14sp</item>
+<!--        <item name="android:fontFamily">@font/Poppins_Regular</item>-->
+    </style>
+    <style name="via_s_e">
+        <item name="android:textColor">#5A5A5A</item>
+        <item name="android:textSize">16sp</item>
+<!--        <item name="android:fontFamily">@font/Poppins_Regular</item>-->
+    </style>
+    <style name="no_code">
+        <item name="android:textColor">#5A5A5A</item>
+        <item name="android:textSize">16sp</item>
+<!--        <item name="android:fontFamily">@font/Poppins_Regular</item>-->
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="txt_code">
+        <item name="android:textColor">#414141</item>
+        <item name="android:textSize">26sp</item>
+<!--        <item name="android:fontFamily">@font/Poppins_Bold</item>-->
+    </style>
+    <style name="txt_content">
+        <item name="android:textColor">#5A5A5A</item>
+        <item name="android:textSize">15.5sp</item>
+<!--        <item name="android:fontFamily">@font/Poppins_Regular</item>-->
+    </style>
+    <style name="tittle_txt_content">
+        <item name="android:textColor">#414141</item>
+        <item name="android:textSize">18sp</item>
+<!--        <item name="android:fontFamily">@font/Poppins_Bold</item>-->
+    </style>
+<!--    ___________________________________________________________- -->
+    <style name="language">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#5A5A5A</item>
+<!--        <item name="android:fontFamily">@font/Poppins_Medium</item>-->
+    </style>
+    <style name="u_language">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#B8B8B8</item>
+<!--        <item name="android:fontFamily">@font/Poppins_Regular</item>-->
+    </style>
+</resources>

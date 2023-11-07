@@ -1,6 +1,7 @@
 package com.pbl.app_mobile.model.DO;
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -21,6 +22,8 @@ import com.pbl.app_mobile.network.ApiManager;
 import com.pbl.app_mobile.network.ApiService;
 import com.pbl.app_mobile.network.JsonHandle;
 import com.pbl.app_mobile.utils.EmailValidator;
+
+import java.util.Objects;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -135,12 +138,14 @@ public class LoginDO {
                         }
                     } catch (Exception e) {
 
+                        Log.e("error", Objects.requireNonNull(e.getLocalizedMessage()));
                     }
                 } else {
                     try {
                         loginController.showValidationError(JsonHandle.getMessage(response, true));
                     } catch (Exception e) {
 
+                        Log.e("error", Objects.requireNonNull(e.getLocalizedMessage()));
                     }
                 }
             }
@@ -148,6 +153,7 @@ public class LoginDO {
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
 
+                Log.e("error", Objects.requireNonNull(t.getLocalizedMessage()));
             }
         });
     }
