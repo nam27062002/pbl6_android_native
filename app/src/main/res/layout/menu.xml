@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/blue_light"
     android:theme="@android:style/Theme.Light"
-    tools:context=".LoginActivity">
+    tools:context=".MenuActivity">
 
     <LinearLayout
         android:id="@+id/top"
@@ -177,22 +177,17 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/imgset"
-                app:layout_constraintEnd_toStartOf="@+id/btset"
                 />
 
             <Button
                 android:id="@+id/btset"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/arrow_right"
-
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="75dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/txtset"
-
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/transparent_background"
+                app:layout_constraintTop_toTopOf="@id/set"
+                app:layout_constraintBottom_toBottomOf="@id/set"
+                app:layout_constraintLeft_toLeftOf="@id/set"
+                app:layout_constraintRight_toRightOf="@id/set"
                 tools:ignore="MissingConstraints" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -561,15 +556,13 @@
 
         <Button
             android:id="@+id/btabout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/arrow_right"
-            android:layout_marginStart="28dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@id/txtversion"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@id/about"
+            app:layout_constraintBottom_toBottomOf="@id/about"
+            app:layout_constraintLeft_toLeftOf="@id/about"
+            android:background="@drawable/transparent_background"
+            app:layout_constraintRight_toRightOf="@id/about"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -594,149 +587,138 @@
         app:layout_constraintTop_toBottomOf="@+id/wsa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/task_menu"
+        app:layout_constraintBottom_toTopOf="@id/buttonHome"
 
         />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/task_menu"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/task_menu"
-
+        android:layout_height="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-        <!-- Guideline 1 (25% từ trái) -->
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="103dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@drawable/rounded_rectangle_up"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <Button
+        android:id="@+id/buttonHome"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@drawable/transparent_background"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/imageHome"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:srcCompat="@drawable/icon_home"
+        app:layout_constraintTop_toTopOf="@+id/buttonHome"
+        app:layout_constraintStart_toStartOf="@+id/buttonHome"
+        app:layout_constraintEnd_toEndOf="@+id/buttonHome"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonHome"
+        android:layout_marginTop="-15dp"/>
+    <TextView
+        android:id="@+id/textHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/imageHome"
+        app:layout_constraintStart_toStartOf="@id/buttonHome"
+        app:layout_constraintEnd_toEndOf="@id/buttonHome"/>
 
-        <!-- Guideline 2 (50% từ trái) -->
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.50" />
+    <Button
+        android:id="@+id/buttonOrder"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/buttonHome"
+        android:background="@drawable/transparent_background"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/imageOrder"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:srcCompat="@drawable/icon_order"
+        app:layout_constraintTop_toTopOf="@+id/buttonOrder"
+        app:layout_constraintStart_toStartOf="@+id/buttonOrder"
+        app:layout_constraintEnd_toEndOf="@+id/buttonOrder"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonOrder"
+        android:layout_marginTop="-15dp"/>
+    <TextView
+        android:id="@+id/textOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/imageOrder"
+        app:layout_constraintStart_toStartOf="@id/buttonOrder"
+        app:layout_constraintEnd_toEndOf="@id/buttonOrder"/>
 
-        <!-- Guideline 3 (75% từ trái) -->
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.75" />
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guideline1"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:orientation="vertical"
-            tools:ignore="MissingConstraints">
+    <Button
+        android:id="@+id/buttonFavourite"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/buttonOrder"
+        android:background="@drawable/transparent_background"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/imageFavourite"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:srcCompat="@drawable/icon_history"
+        app:layout_constraintTop_toTopOf="@+id/buttonFavourite"
+        app:layout_constraintStart_toStartOf="@+id/buttonFavourite"
+        app:layout_constraintEnd_toEndOf="@+id/buttonFavourite"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonFavourite"
+        android:layout_marginTop="-15dp"/>
+    <TextView
+        android:id="@+id/textFavourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="History"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/imageFavourite"
+        app:layout_constraintStart_toStartOf="@id/buttonFavourite"
+        app:layout_constraintEnd_toEndOf="@id/buttonFavourite"/>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/home" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="@string/home"
-                android:textAppearance="@style/menuno" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@+id/guideline1"
-            app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:orientation="vertical"
-            tools:ignore="MissingConstraints">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/order" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="@string/order"
-                android:textAppearance="@style/menuno" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@+id/guideline2"
-            app:layout_constraintEnd_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:orientation="vertical"
-            tools:ignore="MissingConstraints">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/history" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="@string/history"
-                android:textAppearance="@style/menuno" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@+id/guideline3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:orientation="vertical"
-            tools:ignore="MissingConstraints">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/menu" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:text="@string/menu"
-                android:textAppearance="@style/menuyes" />
-
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/buttonMenu"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/buttonFavourite"
+        android:background="@drawable/transparent_background"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/imageMenu"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:srcCompat="@drawable/icon_menu_selected"
+        app:layout_constraintTop_toTopOf="@+id/buttonMenu"
+        app:layout_constraintStart_toStartOf="@+id/buttonMenu"
+        app:layout_constraintEnd_toEndOf="@+id/buttonMenu"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonMenu"
+        android:layout_marginTop="-15dp"/>
+    <TextView
+        android:id="@+id/textMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/imageMenu"
+        app:layout_constraintStart_toStartOf="@id/buttonMenu"
+        app:layout_constraintEnd_toEndOf="@id/buttonMenu"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

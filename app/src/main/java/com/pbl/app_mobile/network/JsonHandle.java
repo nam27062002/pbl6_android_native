@@ -1,7 +1,11 @@
 package com.pbl.app_mobile.network;
 
+import android.util.Log;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+
+import org.json.JSONObject;
 
 import java.lang.reflect.Type;
 import java.util.Map;
@@ -31,7 +35,11 @@ public class JsonHandle {
         return "";
     }
     public static boolean IsSuccess(Response<ResponseBody> response){
-        return (boolean) GetValue(Key.success,response);
+        if ((boolean) GetValue(Key.success,response)){
+            return true;
+        }
+        return false;
+
     }
     public static boolean IsSuccess(Response<ResponseBody> response,boolean isError){
         return (boolean) GetValue(Key.success,response,isError);

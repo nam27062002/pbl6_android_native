@@ -4,4 +4,5 @@ public enum Key {
     success,
     status,
     message,
+    data,
 }
