@@ -80,6 +80,18 @@
         android:background="@drawable/transparent_background" />
 
     <TextView
+        android:id="@+id/textPlaceholderEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email or phone number"
+        app:layout_constraintTop_toTopOf="@id/input_email"
+        app:layout_constraintBottom_toBottomOf="@id/input_email"
+        app:layout_constraintLeft_toLeftOf="@id/input_email"
+        android:textSize="17dp"
+        android:textColor="@color/grey2"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
         android:id="@+id/textView_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -113,6 +125,17 @@
         android:layout_gravity="center_vertical"
         android:background="@drawable/transparent_background"
         android:inputType="textPassword" />
+    <TextView
+        android:id="@+id/textPlaceholderPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your password"
+        app:layout_constraintTop_toTopOf="@id/input_password"
+        app:layout_constraintBottom_toBottomOf="@id/input_password"
+        app:layout_constraintLeft_toLeftOf="@id/input_password"
+        android:textSize="17dp"
+        android:textColor="@color/grey2"
+        android:layout_marginLeft="5dp"/>
 
     <Button
         android:id="@+id/button_eye"
@@ -336,6 +359,7 @@
         app:layout_constraintTop_toTopOf="@id/form_bottom_button"
         android:background="@drawable/transparent_background"
         />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

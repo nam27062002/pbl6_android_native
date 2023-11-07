@@ -15,7 +15,7 @@ public class WelcomeController {
         welcomeDO = new WelcomeDO(this);
     }
     public void navigateToLogin(){
-        view.navigateToLogin();
+        welcomeDO.HandleButtonNext();
     }
 
     public void getCurrentUI(){
@@ -24,11 +24,9 @@ public class WelcomeController {
     public void setCurrentUI(ContentStartAppList contentsStartApp, int size){
         view.setCurrentUI(contentsStartApp,size);
     }
-    public void eventSwipeHorizontal(MotionEvent e1, MotionEvent e2){
-        welcomeDO.HandleEventSwipeHorizontal(e1,e2);
-    }
-    public void updateContentPage(ContentStart contentStart, int target){
-        view.updateContentPage(contentStart,target);
+    public void updateContentPage(ContentStart contentStart, int target,boolean check){
+        if (!check) view.updateContentPage(contentStart,target);
+        else view.navigateToLogin();
     }
 
 

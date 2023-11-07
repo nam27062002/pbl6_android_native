@@ -36,4 +36,13 @@ public class RegisterController {
     public void showValidationError(String errorText){
         view.showValidationError(errorText);
     }
+    public void eventFocusPhoneNumber(boolean hasFocus){
+        view.eventFocusPhoneNumber(hasFocus);
+    }
+    public void onRadioButtonClicked(){
+        view.setRadioButton(registerDO.getCheck());
+    }
+    public void navigateToHome(){
+        view.navigateToHome();
+    }
 }

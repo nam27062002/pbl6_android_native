@@ -47,7 +47,7 @@
     <string name="email_address">**** **** **** xyz@xyz.com</string>
     <string name="bt_continue">Continue</string>
     <string name="tittle_send_code">Code has been send to ***** ***70</string>
-    <string name="didn_t_rece" tools:ignore="StringEscaping">Didn't receive code?</string>
+    <string name="re_receive" tools:ignore="StringEscaping">Did\'t receive code?</string>
     <string name="resend">Resend again</string>
     <string name="bt_verify">Verify</string>
     <string name="set_new_p">Set New Password</string>
@@ -82,5 +82,9 @@
 <!--    ________________________________________________________________________-->
     <string name="vietnamese">Vietnamese</string>
     <string name="tieng_view">Tiếng Việt</string>
+    <string name="default_notification_channel_id">com.pbl.app_mobile</string>
+    <string name="facebook_app_id">688449289836840</string>
+    <string name="fb_login_protocol_scheme">fb688449289836840</string>
+    <string name="facebook_client_token">e7f1042774cf8d792875e90472fb539a</string>
 </resources>
 

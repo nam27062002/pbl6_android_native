@@ -6,45 +6,48 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:theme="@android:style/Theme.Light"
-    tools:context=".LoginActivity">
+    tools:context=".RegisterActivity">
     <View
+        android:id="@+id/viewTop"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/viewEnd"
         android:background="@drawable/rounded_rectangle"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/text_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="RideWizard"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="20dp" />
-
-    <ImageView
-        android:id="@+id/image_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/logo_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_title"
-        android:layout_marginTop="40dp"
-        tools:ignore="MissingConstraints" />
-    <View
-        android:id="@+id/box"
-        android:layout_width="0dp"
-        android:layout_height="300dp"
+    <LinearLayout
         android:layout_marginTop="20dp"
-        app:layout_constraintWidth_percent="0.8"
-        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/image_logo" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="10dp"
+        tools:ignore="MissingConstraints"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/image_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/logo_1"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="RideWizard"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+<!--NAME-->
     <TextView
         android:id="@+id/textview_name"
         android:layout_width="wrap_content"
@@ -52,10 +55,10 @@
         android:text="NAME"
         android:textSize="13sp"
         android:textStyle="bold"
+        android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="@id/outline_input_name"
-        app:layout_constraintTop_toTopOf="@id/box"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
         tools:ignore="MissingConstraints" />
-
     <View
         android:id="@+id/outline_input_name"
         android:layout_width="300dp"
@@ -65,7 +68,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textview_name" />
-
     <EditText
         android:id="@+id/input_name"
         android:layout_height="0dp"
@@ -77,7 +79,18 @@
         android:layout_marginLeft="10dp"
         android:layout_gravity="center_vertical"
         android:background="@drawable/transparent_background" />
-
+    <TextView
+        android:id="@+id/textPlaceholderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fullname"
+        app:layout_constraintTop_toTopOf="@id/input_name"
+        app:layout_constraintBottom_toBottomOf="@id/input_name"
+        app:layout_constraintLeft_toLeftOf="@id/input_name"
+        android:textSize="17dp"
+        android:textColor="@color/grey2"
+        android:layout_marginLeft="5dp"/>
+<!--EMAIL-->
     <TextView
         android:id="@+id/textview_email"
         android:layout_width="wrap_content"
@@ -89,7 +102,6 @@
         app:layout_constraintStart_toStartOf="@id/outline_input_email"
         app:layout_constraintTop_toBottomOf="@id/input_name"
         tools:ignore="MissingConstraints" />
-
     <View
         android:id="@+id/outline_input_email"
         android:layout_width="300dp"
@@ -99,7 +111,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textview_email" />
-
     <EditText
         android:id="@+id/input_email"
         android:layout_height="0dp"
@@ -111,7 +122,104 @@
         android:layout_marginLeft="10dp"
         android:layout_gravity="center_vertical"
         android:background="@drawable/transparent_background" />
-
+    <TextView
+        android:id="@+id/textPlaceholderEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email or phone number"
+        app:layout_constraintTop_toTopOf="@id/input_email"
+        app:layout_constraintBottom_toBottomOf="@id/input_email"
+        app:layout_constraintLeft_toLeftOf="@id/input_email"
+        android:textSize="17dp"
+        android:textColor="@color/grey2"
+        android:layout_marginLeft="5dp"/>
+<!--PHONE-->
+    <TextView
+        android:id="@+id/textView_phonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PHONE NUMBER"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/outline_input_password"
+        app:layout_constraintTop_toBottomOf="@id/input_email"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/outline_input_phonenumber"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/white_input_backgroud"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_phonenumber" />
+    <ImageView
+        android:id="@+id/flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/vietnam"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toTopOf="@+id/outline_input_phonenumber"
+        app:layout_constraintLeft_toLeftOf="@id/outline_input_name"
+        app:layout_constraintBottom_toBottomOf="@+id/outline_input_phonenumber"/>
+    <ImageView
+        android:id="@+id/imageArrowDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/down_arrow"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintTop_toTopOf="@+id/outline_input_phonenumber"
+        app:layout_constraintLeft_toRightOf="@id/flag"
+        app:layout_constraintBottom_toBottomOf="@+id/outline_input_phonenumber"/>
+    <View
+        android:id="@+id/line"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@+id/outline_input_phonenumber"
+        app:layout_constraintLeft_toRightOf="@id/imageArrowDown"
+        app:layout_constraintBottom_toBottomOf="@+id/outline_input_phonenumber"
+        android:background="@android:color/darker_gray"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/text_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:text="+84"
+        android:textSize="18dp"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/line"
+        app:layout_constraintTop_toTopOf="@id/outline_input_phonenumber"
+        app:layout_constraintBottom_toBottomOf="@id/outline_input_phonenumber"
+        tools:ignore="MissingConstraints" />
+    <EditText
+        android:id="@+id/input_phonenumber"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toEndOf="@id/text_phone"
+        app:layout_constraintEnd_toEndOf="@id/outline_input_phonenumber"
+        app:layout_constraintTop_toTopOf="@id/outline_input_phonenumber"
+        app:layout_constraintBottom_toBottomOf="@id/outline_input_phonenumber"
+        android:layout_marginLeft="5dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/transparent_background"
+        android:inputType="number" />
+    <TextView
+        android:id="@+id/textPlaceholderPhonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your mobile number"
+        app:layout_constraintTop_toTopOf="@id/input_phonenumber"
+        app:layout_constraintBottom_toBottomOf="@id/input_phonenumber"
+        app:layout_constraintLeft_toLeftOf="@id/input_phonenumber"
+        android:textSize="17dp"
+        android:textColor="@color/grey2"
+        android:layout_marginLeft="5dp"/>
+<!--PASSWORD-->
     <TextView
         android:id="@+id/textView_password"
         android:layout_width="wrap_content"
@@ -121,9 +229,8 @@
         android:textStyle="bold"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="@id/outline_input_password"
-        app:layout_constraintTop_toBottomOf="@id/input_email"
+        app:layout_constraintTop_toBottomOf="@id/input_phonenumber"
         tools:ignore="MissingConstraints" />
-
     <View
         android:id="@+id/outline_input_password"
         android:layout_width="300dp"
@@ -133,7 +240,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView_password" />
-
     <EditText
         android:id="@+id/input_password"
         android:layout_height="0dp"
@@ -147,17 +253,16 @@
         android:background="@drawable/transparent_background"
         android:inputType="textPassword" />
     <TextView
-        android:id="@+id/text_error"
+        android:id="@+id/textPlaceholderPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="The password is not incorrect!"
-        android:textSize="14sp"
-        android:textColor="@color/red"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@id/outline_input_password"
-        app:layout_constraintTop_toBottomOf="@id/outline_input_password"
-        tools:ignore="MissingConstraints" />
-
+        android:text="Enter your password"
+        app:layout_constraintTop_toTopOf="@id/input_password"
+        app:layout_constraintBottom_toBottomOf="@id/input_password"
+        app:layout_constraintLeft_toLeftOf="@id/input_password"
+        android:textSize="17dp"
+        android:textColor="@color/grey2"
+        android:layout_marginLeft="5dp"/>
     <Button
         android:id="@+id/button_eye"
         android:layout_height="0dp"
@@ -177,35 +282,66 @@
         android:layout_margin="15dp"
         app:srcCompat="@drawable/hide"
         tools:ignore="MissingConstraints" />
-
+<!--ERROR-->
     <TextView
-        android:id="@+id/text_forgetpassword"
+        android:id="@+id/text_error"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Please check the box to agree to the Terms of Service and Privacy Policy"
+        android:textSize="14sp"
+        android:textColor="@color/red"
+        app:layout_constraintStart_toStartOf="@id/outline_input_password"
+        app:layout_constraintTop_toBottomOf="@id/outline_input_password"
+        app:layout_constraintEnd_toEndOf="@+id/outline_input_password"
+        android:layout_marginTop="10dp"
+        tools:ignore="MissingConstraints" />
+    <ImageButton
+        android:id="@+id/radioButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="@id/outline_input_password"
-        app:layout_constraintTop_toBottomOf="@id/outline_input_password"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:textColor="@color/link"
+        app:layout_constraintLeft_toLeftOf="@id/textView_password"
+        app:layout_constraintTop_toTopOf="@id/text_radio"
+        android:src="@drawable/_circle"
+        android:background="@drawable/transparent_background"
+        app:layout_constraintBottom_toBottomOf="@id/text_radio"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_radio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="By signing up you agree to the Terms of service and Privacy policy"
+        android:textSize="14sp"
+        android:textColor="@color/grey2"
+        app:layout_constraintStart_toStartOf="@id/text_error"
+        app:layout_constraintTop_toBottomOf="@id/text_error"
+        app:layout_constraintEnd_toEndOf="@+id/input_password"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        tools:ignore="MissingConstraints" />
+
 
     <Button
         android:id="@+id/button_sign_up"
         android:layout_width="0dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="70dp"
         android:text="Sign up"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="18sp"
-        android:layout_marginTop="20dp"
         android:background="@drawable/custom_button_background"
-        app:layout_constraintTop_toBottomOf="@id/text_forgetpassword"
         app:layout_constraintStart_toStartOf="@id/outline_input_password"
         app:layout_constraintEnd_toEndOf="@id/outline_input_password"
+        app:layout_constraintTop_toBottomOf="@+id/text_radio"
+        android:layout_marginTop="20dp"
         tools:ignore="MissingConstraints" />
-
+    <View
+        android:id="@+id/viewEnd"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@id/button_sign_up"
+        tools:ignore="MissingConstraints" />
+<!--__________________________________________________________________________________-->
     <TextView
         android:id="@+id/text_sign_up"
         android:layout_width="wrap_content"
@@ -276,5 +412,8 @@
         app:layout_constraintTop_toTopOf="@id/view_sign_up"
         android:text="Sign up"
         android:textColor="@color/white" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
