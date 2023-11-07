@@ -18,7 +18,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.pbl.app_mobile.controller.RegisterController;
-import com.pbl.app_mobile.model.BEAN.User.User;
+import com.pbl.app_mobile.data.User;
 import com.pbl.app_mobile.view.RegisterView;
 
 public class RegisterActivity extends AppCompatActivity implements RegisterView {

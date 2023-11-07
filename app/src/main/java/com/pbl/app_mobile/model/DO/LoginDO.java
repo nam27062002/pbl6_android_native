@@ -117,6 +117,8 @@ public class LoginDO {
             }
         });
     }
+    public static int userId;
+    public static String accessToken;
     private void callApiSignIn(com.pbl.app_mobile.data.User user){
         ApiService apiService = ApiManager.getInstance().createService(ApiService.class);
         JsonObject paramObject = new JsonObject();
@@ -131,6 +133,8 @@ public class LoginDO {
                     try {
                         if (response.isSuccessful()) {
                             com.pbl.app_mobile.model.BEAN.User.User data = response.body().getData().getUser();
+                            userId = data.getId().intValue();
+                            accessToken =data.getAccessToken();
 //                            SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
                             loginController.navigateToHome();
                         }

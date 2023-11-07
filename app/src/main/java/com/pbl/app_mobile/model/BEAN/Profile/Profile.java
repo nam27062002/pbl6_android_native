@@ -1,177 +1,190 @@
+
 package com.pbl.app_mobile.model.BEAN.Profile;
 
+import com.google.gson.annotations.SerializedName;
+
+@SuppressWarnings("unused")
 public class Profile {
-    int id;
-    String firstName;
-    String lastName;
-    String fullName;
-    String dob;
-    String address;
-    String phNo;
-    String phone_verified;
-    String email;
-    String email_verified;
-    String avatar;
-    String OTPSecret;
-    String googleId;
-    String facebookId;
-    int passwordDefault;
-    String createdAt;
-    String updatedAt;
 
-    public Profile(int id, String firstName, String lastName, String fullName, String dob, String address, String phNo, String phone_verified, String email, String email_verified, String avatar, String OTPSecret, String googleId, String facebookId, int passwordDefault, String createdAt, String updatedAt) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.fullName = fullName;
-        this.dob = dob;
-        this.address = address;
-        this.phNo = phNo;
-        this.phone_verified = phone_verified;
-        this.email = email;
-        this.email_verified = email_verified;
-        this.avatar = avatar;
-        this.OTPSecret = OTPSecret;
-        this.googleId = googleId;
-        this.facebookId = facebookId;
-        this.passwordDefault = passwordDefault;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
+    @SerializedName("address")
+    private Object mAddress;
+    @SerializedName("avatar")
+    private Object mAvatar;
+    @SerializedName("createdAt")
+    private String mCreatedAt;
+    @SerializedName("dob")
+    private Object mDob;
+    @SerializedName("email")
+    private String mEmail;
+    @SerializedName("email_verified")
+    private Long mEmailVerified;
+    @SerializedName("facebookId")
+    private Object mFacebookId;
+    @SerializedName("firstName")
+    private Object mFirstName;
+    @SerializedName("fullName")
+    private String mFullName;
+    @SerializedName("googleId")
+    private Object mGoogleId;
+    @SerializedName("id")
+    private Long mId;
+    @SerializedName("lastName")
+    private String mLastName;
+    @SerializedName("OTPSecret")
+    private String mOTPSecret;
+    @SerializedName("passwordDefault")
+    private Long mPasswordDefault;
+    @SerializedName("phNo")
+    private String mPhNo;
+    @SerializedName("phone_verified")
+    private Long mPhoneVerified;
+    @SerializedName("status")
+    private String mStatus;
+    @SerializedName("updatedAt")
+    private String mUpdatedAt;
+
+    public Object getAddress() {
+        return mAddress;
     }
 
-    public int getId() {
-        return id;
+    public void setAddress(Object address) {
+        mAddress = address;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public Object getAvatar() {
+        return mAvatar;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
-    public String getDob() {
-        return dob;
-    }
-
-    public void setDob(String dob) {
-        this.dob = dob;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getPhNo() {
-        return phNo;
-    }
-
-    public void setPhNo(String phNo) {
-        this.phNo = phNo;
-    }
-
-    public String getPhone_verified() {
-        return phone_verified;
-    }
-
-    public void setPhone_verified(String phone_verified) {
-        this.phone_verified = phone_verified;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getEmail_verified() {
-        return email_verified;
-    }
-
-    public void setEmail_verified(String email_verified) {
-        this.email_verified = email_verified;
-    }
-
-    public String getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
-    }
-
-    public String getOTPSecret() {
-        return OTPSecret;
-    }
-
-    public void setOTPSecret(String OTPSecret) {
-        this.OTPSecret = OTPSecret;
-    }
-
-    public String getGoogleId() {
-        return googleId;
-    }
-
-    public void setGoogleId(String googleId) {
-        this.googleId = googleId;
-    }
-
-    public String getFacebookId() {
-        return facebookId;
-    }
-
-    public void setFacebookId(String facebookId) {
-        this.facebookId = facebookId;
-    }
-
-    public int getPasswordDefault() {
-        return passwordDefault;
-    }
-
-    public void setPasswordDefault(int passwordDefault) {
-        this.passwordDefault = passwordDefault;
+    public void setAvatar(Object avatar) {
+        mAvatar = avatar;
     }
 
     public String getCreatedAt() {
-        return createdAt;
+        return mCreatedAt;
     }
 
     public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
+        mCreatedAt = createdAt;
+    }
+
+    public Object getDob() {
+        return mDob;
+    }
+
+    public void setDob(Object dob) {
+        mDob = dob;
+    }
+
+    public String getEmail() {
+        return mEmail;
+    }
+
+    public void setEmail(String email) {
+        mEmail = email;
+    }
+
+    public Long getEmailVerified() {
+        return mEmailVerified;
+    }
+
+    public void setEmailVerified(Long emailVerified) {
+        mEmailVerified = emailVerified;
+    }
+
+    public Object getFacebookId() {
+        return mFacebookId;
+    }
+
+    public void setFacebookId(Object facebookId) {
+        mFacebookId = facebookId;
+    }
+
+    public Object getFirstName() {
+        return mFirstName;
+    }
+
+    public void setFirstName(Object firstName) {
+        mFirstName = firstName;
+    }
+
+    public String getFullName() {
+        return mFullName;
+    }
+
+    public void setFullName(String fullName) {
+        mFullName = fullName;
+    }
+
+    public Object getGoogleId() {
+        return mGoogleId;
+    }
+
+    public void setGoogleId(Object googleId) {
+        mGoogleId = googleId;
+    }
+
+    public Long getId() {
+        return mId;
+    }
+
+    public void setId(Long id) {
+        mId = id;
+    }
+
+    public String getLastName() {
+        return mLastName;
+    }
+
+    public void setLastName(String lastName) {
+        mLastName = lastName;
+    }
+
+    public String getOTPSecret() {
+        return mOTPSecret;
+    }
+
+    public void setOTPSecret(String oTPSecret) {
+        mOTPSecret = oTPSecret;
+    }
+
+    public Long getPasswordDefault() {
+        return mPasswordDefault;
+    }
+
+    public void setPasswordDefault(Long passwordDefault) {
+        mPasswordDefault = passwordDefault;
+    }
+
+    public String getPhNo() {
+        return mPhNo;
+    }
+
+    public void setPhNo(String phNo) {
+        mPhNo = phNo;
+    }
+
+    public Long getPhoneVerified() {
+        return mPhoneVerified;
+    }
+
+    public void setPhoneVerified(Long phoneVerified) {
+        mPhoneVerified = phoneVerified;
+    }
+
+    public String getStatus() {
+        return mStatus;
+    }
+
+    public void setStatus(String status) {
+        mStatus = status;
     }
 
     public String getUpdatedAt() {
-        return updatedAt;
+        return mUpdatedAt;
     }
 
     public void setUpdatedAt(String updatedAt) {
-        this.updatedAt = updatedAt;
+        mUpdatedAt = updatedAt;
     }
+
 }

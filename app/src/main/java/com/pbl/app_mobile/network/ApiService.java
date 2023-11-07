@@ -1,6 +1,7 @@
 package com.pbl.app_mobile.network;
 import com.google.gson.JsonObject;
-import com.pbl.app_mobile.model.BEAN.User.User;
+import com.pbl.app_mobile.data.User;
+import com.pbl.app_mobile.model.BEAN.Profile.ProfileRespone;
 import com.pbl.app_mobile.model.BEAN.User.UserResponse;
 
 import okhttp3.ResponseBody;
@@ -18,5 +19,5 @@ public interface ApiService {
     @POST("/api/v1/users/login/google")
     Call<ResponseBody> SignInWithGoogle(@Body JsonObject gmail);
     @GET("/api/v1/users/{id}")
-    Call<UserResponse> getProfileById(@Path("id")int id);
+    Call<ProfileRespone> getProfileById(@Path("id")int id);
 }
