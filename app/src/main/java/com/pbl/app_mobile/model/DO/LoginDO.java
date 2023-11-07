@@ -1,4 +1,6 @@
 package com.pbl.app_mobile.model.DO;
+import static com.pbl.app_mobile.network.JsonHandle.IsSuccess;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
@@ -100,7 +102,7 @@ public class LoginDO {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if (response.isSuccessful()) {
                     try {
-                        if (JsonHandle.IsSuccess(response)) {
+                        if (IsSuccess(response)) {
                             loginController.messageLoginWithGoogle(account.getId() + "\n" + account.getEmail());
                             loginController.navigateToRegisterAuth();
                         }
@@ -133,7 +135,13 @@ public class LoginDO {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if (response.isSuccessful()) {
                     try {
-                        if (JsonHandle.IsSuccess(response)) {
+                        if (IsSuccess(response)) {
+
+                            // id với accesstoken ở đây
+//
+                            String id = JsonHandle.GetId();
+                            String accessToken = JsonHandle.GetAccessToken();
+                            Log.d("NAMTRAN",id + accessToken);
                             loginController.navigateToHome();
                         }
                     } catch (Exception e) {
