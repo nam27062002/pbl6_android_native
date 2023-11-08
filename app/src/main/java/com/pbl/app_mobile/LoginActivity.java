@@ -246,7 +246,6 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
 
     @Override
     public void navigateToHome() {
-        Log.d("fjasfaff", "navigateToHome: " );
         Intent intent = new Intent(LoginActivity.this, ContainerPageActivity.class);
         startActivity(intent);
     }

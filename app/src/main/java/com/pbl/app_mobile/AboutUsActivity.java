@@ -24,8 +24,7 @@ public class AboutUsActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AboutUsActivity.this, MenuActivity.class);
-                startActivity(intent);
+                AboutUsActivity.this.onBackPressed();
             }
         });
     }
