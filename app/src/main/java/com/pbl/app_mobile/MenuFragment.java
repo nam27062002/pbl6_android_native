@@ -29,7 +29,7 @@ public class MenuFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_menu, container, false);
         profile = view.findViewById(R.id.profile);
-        aboutUsButton = view.findViewById(R.id.btabout);
+        aboutUsButton = view.findViewById(R.id.aboutButton);
         profileFragment = new ProfileFragment();
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
