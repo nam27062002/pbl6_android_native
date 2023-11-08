@@ -41,11 +41,13 @@ public class MenuFragment extends Fragment {
             }
         });
 
+
         aboutUsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 Intent intent = new Intent(getActivity(), AboutUsActivity.class);
-                 startActivity(intent);
+                AboutUsFragment aboutUsFragment = new AboutUsFragment();
+                FragmentManager fragmentManager = getParentFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.container, aboutUsFragment).addToBackStack(null).commit();
             }
         });
 

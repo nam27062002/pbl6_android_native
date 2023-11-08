@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:theme="@android:style/Theme.Light"
-    tools:context=".AboutUsActivity">
+    tools:context=".ContactFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top_change"
@@ -25,35 +25,22 @@
             android:background="@drawable/btleft"
 
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/top"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginStart="16dp"
             android:layout_marginTop="11dp"
             android:layout_marginBottom="13dp"
             tools:ignore="NotSibling" />
-        <TextView
-            android:id="@+id/txt_change"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="@style/txt_tittle"
 
-            app:layout_constraintTop_toBottomOf="@+id/top"
-            app:layout_constraintStart_toEndOf="@+id/bt_change"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginStart="66.5dp"
-            android:layout_marginEnd="112.5dp"
-            tools:ignore="NotSibling" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <WebView
         android:id="@+id/web_view"
         android:layout_height="0dp"
         android:layout_width="0dp"
+        android:layout_marginBottom="80dp"
         app:layout_constraintTop_toBottomOf="@id/top_change"
         app:layout_constraintLeft_toLeftOf="@id/top_change"
         app:layout_constraintRight_toRightOf="@id/top_change"
         app:layout_constraintBottom_toBottomOf="parent"
         android:mimeType="text/html"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

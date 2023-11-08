@@ -238,17 +238,13 @@
 
             <Button
                 android:id="@+id/bt_privacy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="130dp"
-
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/arrow_right"
-                app:layout_constraintBottom_toBottomOf="@+id/task_s_4"
-                app:layout_constraintEnd_toEndOf="@+id/task_s_4"
-                app:layout_constraintHorizontal_bias="0.6"
-                app:layout_constraintStart_toEndOf="@id/txt_privacy"
-                app:layout_constraintTop_toTopOf="@+id/task_s_4" />
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/transparent_background"
+                app:layout_constraintTop_toTopOf="@id/task_s_4"
+                app:layout_constraintBottom_toBottomOf="@id/task_s_4"
+                app:layout_constraintLeft_toLeftOf="@id/task_s_4"
+                app:layout_constraintRight_toRightOf="@id/task_s_4"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -280,17 +276,13 @@
 
             <Button
                 android:id="@+id/bt_contact"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="130dp"
-
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/arrow_right"
-                app:layout_constraintBottom_toBottomOf="@+id/task_s_5"
-                app:layout_constraintEnd_toEndOf="@+id/task_s_5"
-                app:layout_constraintHorizontal_bias="0.6"
-                app:layout_constraintStart_toEndOf="@id/txt_contact"
-                app:layout_constraintTop_toTopOf="@+id/task_s_5" />
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/transparent_background"
+                app:layout_constraintTop_toTopOf="@id/task_s_5"
+                app:layout_constraintBottom_toBottomOf="@id/task_s_5"
+                app:layout_constraintLeft_toLeftOf="@id/task_s_5"
+                app:layout_constraintRight_toRightOf="@id/task_s_5"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
         <androidx.constraintlayout.widget.ConstraintLayout

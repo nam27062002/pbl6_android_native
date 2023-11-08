@@ -18,7 +18,6 @@ public class ContainerPageActivity extends AppCompatActivity {
     OrderFragment orderFragment;
     HistoryFragment historyFragment;
     MenuFragment menuFragment;
-    SettingsFragment settingsFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +27,6 @@ public class ContainerPageActivity extends AppCompatActivity {
         orderFragment = new OrderFragment();
         historyFragment = new HistoryFragment();
         menuFragment = new MenuFragment();
-        settingsFragment = new SettingsFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.container,homeFragment).commit();
         menu.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @SuppressLint("NonConstantResourceId")
