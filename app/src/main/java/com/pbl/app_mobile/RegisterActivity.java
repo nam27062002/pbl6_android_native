@@ -1,7 +1,6 @@
 package com.pbl.app_mobile;
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.text.InputType;
 import android.text.Spannable;
@@ -19,7 +18,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.pbl.app_mobile.controller.RegisterController;
-import com.pbl.app_mobile.model.BEAN.User;
+import com.pbl.app_mobile.data.User;
 import com.pbl.app_mobile.view.RegisterView;
 
 public class RegisterActivity extends AppCompatActivity implements RegisterView {
@@ -146,7 +145,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
 
     @Override
     public void navigateToHome() {
-        Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
+        Intent intent = new Intent(RegisterActivity.this, ContainerPageActivity.class);
         startActivity(intent);
     }
 

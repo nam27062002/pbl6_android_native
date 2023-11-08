@@ -3,7 +3,7 @@ import android.app.Activity;
 import android.content.Intent;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.pbl.app_mobile.model.BEAN.User;
+import com.pbl.app_mobile.data.User;
 import com.pbl.app_mobile.model.DO.LoginDO;
 import com.pbl.app_mobile.view.LoginView;
 

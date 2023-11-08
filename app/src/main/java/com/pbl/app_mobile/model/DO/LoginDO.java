@@ -1,5 +1,8 @@
 package com.pbl.app_mobile.model.DO;
+import static com.pbl.app_mobile.network.JsonHandle.IsSuccess;
+
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
@@ -12,12 +15,12 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.fido.u2f.api.common.RequestParams;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.gson.JsonObject;
 import com.pbl.app_mobile.controller.LoginController;
-import com.pbl.app_mobile.model.BEAN.User;
+import com.pbl.app_mobile.data.User;
+import com.pbl.app_mobile.model.BEAN.User.UserResponse;
 import com.pbl.app_mobile.network.ApiManager;
 import com.pbl.app_mobile.network.ApiService;
 import com.pbl.app_mobile.network.JsonHandle;
@@ -100,7 +103,7 @@ public class LoginDO {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if (response.isSuccessful()) {
                     try {
-                        if (JsonHandle.IsSuccess(response)) {
+                        if (IsSuccess(response)) {
                             loginController.messageLoginWithGoogle(account.getId() + "\n" + account.getEmail());
                             loginController.navigateToRegisterAuth();
                         }
@@ -121,7 +124,9 @@ public class LoginDO {
             }
         });
     }
-    private void callApiSignIn(User user){
+    public static int userId;
+    public static String accessToken;
+    private void callApiSignIn(com.pbl.app_mobile.data.User user){
         ApiService apiService = ApiManager.getInstance().createService(ApiService.class);
         JsonObject paramObject = new JsonObject();
         paramObject.addProperty("username", user.getEmail());
@@ -133,16 +138,24 @@ public class LoginDO {
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 if (response.isSuccessful()) {
                     try {
-                        if (JsonHandle.IsSuccess(response)) {
+                        if (IsSuccess(response)) {
+
+                            // id với accesstoken ở đây
+//
+                            String id = JsonHandle.GetId();
+                            String accessToken = JsonHandle.GetAccessToken();
+                            Log.d("NAMTRAN",id + accessToken);
                             loginController.navigateToHome();
                         }
                     } catch (Exception e) {
+
                         Log.e("error", Objects.requireNonNull(e.getLocalizedMessage()));
                     }
                 } else {
                     try {
                         loginController.showValidationError(JsonHandle.getMessage(response, true));
                     } catch (Exception e) {
+
                         Log.e("error", Objects.requireNonNull(e.getLocalizedMessage()));
                     }
                 }
@@ -150,6 +163,7 @@ public class LoginDO {
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
+
                 Log.e("error", Objects.requireNonNull(t.getLocalizedMessage()));
             }
         });

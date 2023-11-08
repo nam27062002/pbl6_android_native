@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,66 +13,101 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.App_Mobile"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBivdveQCoYAhOEMd0xCUlKsPKSaq6nSA8" />
+
+        <!-- WELCOME -->
+
 
         <!--WELCOME-->
         <activity
             android:name=".MainActivity"
-            android:label="Welcome"
-            android:exported="true">
+            android:exported="true"
+            android:label="Welcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!--LOGIN-->
+        </activity> <!-- LOGIN -->
         <activity
             android:name=".LoginActivity"
-            android:label="Login"
-            android:exported="true">
+            android:exported="true"
+            android:label="Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!--REGISTER-->
+        </activity> <!-- REGISTER -->
         <activity
             android:name=".RegisterActivity"
-            android:label="Register"
-            android:exported="true">
+            android:exported="true"
+            android:label="Register">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!--REGISTER-AUTH-->
+        </activity> <!-- REGISTER-AUTH -->
         <activity
             android:name=".RegisterAuthActivity"
-            android:label="Register"
-            android:exported="true">
+            android:exported="true"
+            android:label="Register">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- VERIFY -->
+        <activity
+            android:name=".VerifyAccount"
+            android:exported="true"
+            android:label="VerifyAccount">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- HOME -->
+        <activity
+            android:name=".ContainerPageActivity"
+            android:exported="true"
+            android:label="Home">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!--VERIFY-->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
+
+        <!--ABOUT_US-->
         <activity
-            android:name=".VerifyAccount"
-            android:label="VerifyAccount"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <!--HOME-->
-        <activity
-            android:name=".HomeActivity"
-            android:label="Home"
+            android:name=".AboutUsActivity"
+            android:label="AboutUs"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -80,5 +118,5 @@
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
         <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
+
 </manifest>

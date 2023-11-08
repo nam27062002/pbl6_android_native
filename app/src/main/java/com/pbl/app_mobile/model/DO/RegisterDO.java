@@ -1,7 +1,7 @@
 package com.pbl.app_mobile.model.DO;
 
 import com.pbl.app_mobile.controller.RegisterController;
-import com.pbl.app_mobile.model.BEAN.User;
+import com.pbl.app_mobile.data.User;
 import com.pbl.app_mobile.network.ApiManager;
 import com.pbl.app_mobile.network.ApiService;
 import com.pbl.app_mobile.network.JsonHandle;
