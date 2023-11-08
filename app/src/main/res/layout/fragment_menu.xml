@@ -78,6 +78,7 @@
             android:paddingHorizontal="15dp"
             >
 
+
             <FrameLayout
                 android:gravity="center"
                 android:id="@+id/set"
@@ -86,7 +87,7 @@
                 tools:ignore="MissingConstraints">
                 <LinearLayout
                     android:layout_gravity="center_vertical"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <ImageView
@@ -110,22 +111,13 @@
                         android:layout_marginStart="10dp"
                         />
                 </LinearLayout>
-
-
                 <Button
-                    android:id="@+id/btset"
-                    android:layout_width="10dp"
-                    android:layout_height="20dp"
-                    android:background="@drawable/arrow_right"
-                    android:layout_gravity="right|center"
-                    tools:ignore="MissingConstraints" />
-                <View
-                    android:layout_gravity="bottom"
+                    android:id="@+id/settingsButton"
                     android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:background="#3C3C434D"
-                    android:layout_marginStart="40dp"
-                    />
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/transparent_background"
+
+                    tools:ignore="MissingConstraints" />
             </FrameLayout>
 
             <FrameLayout
