@@ -22,7 +22,7 @@ public class ChangePasswordActivity extends AppCompatActivity implements ChangeP
     private Button btEyeOle;
     private Button btEyeNew;
     private Button btEyeReNew;
-    private TextView txtError;
+    private final TextView txtError = new TextView(this);
     private final TextView holderOle = new TextView(this);
     private final TextView holderNew = new TextView(this);
     private final TextView holderReNew = new TextView(this);
