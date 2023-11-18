@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.pbl.app_mobile"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.pbl.app_mobile"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

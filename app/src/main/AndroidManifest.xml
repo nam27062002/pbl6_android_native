@@ -14,7 +14,7 @@
         android:theme="@style/Theme.App_Mobile"
         tools:targetApi="31">
 
-        <!--WELCOME-->
+        <!-- WELCOME -->
         <activity
             android:name=".MainActivity"
             android:label="Welcome"
@@ -24,59 +24,43 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--LOGIN-->
+
+        <!-- LOGIN -->
         <activity
             android:name=".LoginActivity"
             android:label="Login"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <!--REGISTER-->
+
+        <!-- REGISTER -->
         <activity
             android:name=".RegisterActivity"
             android:label="Register"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
-        <!--REGISTER-AUTH-->
+        <!-- REGISTER-AUTH -->
         <activity
             android:name=".RegisterAuthActivity"
             android:label="Register"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
-        <!--VERIFY-->
+        <!-- VERIFY -->
         <activity
             android:name=".VerifyAccount"
             android:label="VerifyAccount"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <!--HOME-->
+
+        <!-- HOME -->
         <activity
             android:name=".HomeActivity"
             android:label="Home"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <!--ChangePassword-->
+
+        <!-- ChangePassword -->
         <activity
             android:name=".ChangePasswordActivity"
             android:label="ChangePassword"
@@ -86,19 +70,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--ABOUT-US-->
+
+        <!-- ABOUT-US -->
         <activity
             android:name=".About_us"
             android:label="About us"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
         <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET"
+        tools:ignore="ManifestOrder" />
 </manifest>

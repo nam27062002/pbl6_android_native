@@ -22,7 +22,11 @@
     <string name="new_p">NEW PASSWORD</string>
     <string name="fail_p">Wrong password</string>
     <string name="re_e_p">RE-ENTER PASSWORD</string>
-    <string name="holder">Email or phone number</string>
+    <string name="holder">Enter Email or PhoneNumber</string>
+    <string name="holderOld">Enter Your Old Password</string>
+    <string name="holderNew">Enter New Password</string>
+    <string name="holderReNew">Re-Enter New Password</string>
+
 <!--    ________________________________-->
     <string name="txt_setting">Setting</string>
     <string name="region">Region</string>

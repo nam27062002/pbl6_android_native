@@ -57,8 +57,13 @@
     </style>
     <style name="txt_holder">
         <item name="android:textColor">#D0D0D0</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">19sp</item>
 <!--        <item name="android:fontFamily">@font/Poppins_Bold</item>-->
+    </style>
+    <style name="txt_input">
+        <item name="android:textColor">#000008</item>
+        <item name="android:textSize">19sp</item>
+        <!--        <item name="android:fontFamily">@font/Poppins_Bold</item>-->
     </style>
 <!--    ______________________________________________-->
     <style name="tittle_task_s">

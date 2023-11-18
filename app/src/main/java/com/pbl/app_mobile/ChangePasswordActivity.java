@@ -8,6 +8,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,16 +20,15 @@ public class ChangePasswordActivity extends AppCompatActivity implements ChangeP
     private EditText inputOldPassword;
     private EditText inputNewPassword;
     private EditText inputReNewPassword;
-    private Button btEyeOle;
-    private Button btEyeNew;
-    private Button btEyeReNew;
-    private final TextView txtError = new TextView(this);
-    private final TextView holderOle = new TextView(this);
-    private final TextView holderNew = new TextView(this);
-    private final TextView holderReNew = new TextView(this);
+    private ImageButton btEyeOle;
+    private ImageButton btEyeNew;
+    private ImageButton btEyeReNew;
+    private TextView txtError ;
+    private TextView holderOle ;
+    private TextView holderNew ;
+    private TextView holderReNew ;
     Animation clickAnimation;
     private ChangePasswordController changePasswordController;
-    CharSequence hint;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,19 +40,11 @@ public class ChangePasswordActivity extends AppCompatActivity implements ChangeP
         btEyeNew = findViewById(R.id.eye2);
         btEyeReNew = findViewById(R.id.eye3);
         Button btSave = findViewById(R.id.save);
-        hint = inputOldPassword.getHint();
-        if (hint != null) {
-            holderOle.setText(hint);
-        }
-        hint = inputNewPassword.getHint();
-        if (hint != null) {
-            holderNew.setText(hint);
-        }
-        hint = inputReNewPassword.getHint();
-        if (hint != null) {
-            holderReNew.setText(hint);
-        }
+        holderOle = findViewById(R.id.holderOld);
+        holderNew = findViewById(R.id.holderNew);
+        holderReNew = findViewById(R.id.holderReNew);
         clickAnimation = AnimationUtils.loadAnimation(this, R.anim.button_click_animation);
+        txtError = findViewById(R.id.txt_error);
 
         changePasswordController = new ChangePasswordController(this,this);
         clearValidationError();
@@ -121,63 +113,63 @@ public class ChangePasswordActivity extends AppCompatActivity implements ChangeP
     @Override
     public void eventFocusOldPassword(boolean hasFocus) {
         if (hasFocus) {
-            inputOldPassword.setHint("");
+            holderOle.setText("");
         } else {
             if (inputOldPassword.getText().toString().isEmpty()){
-                inputOldPassword.setHint("");
+                holderOle.setText("Enter Your Old Password");
             }
         }
     }
     @Override
     public void eventFocusNewPassword(boolean hasFocus) {
         if (hasFocus) {
-            inputNewPassword.setHint("");
+            holderNew.setText("");
         } else {
             if (inputNewPassword.getText().toString().isEmpty()){
-                inputNewPassword.setHint("");
+                holderNew.setText("Enter New Password");
             }
         }
     }
     @Override
     public void eventFocusReNewPassword(boolean hasFocus) {
         if (hasFocus) {
-            inputReNewPassword.setHint("");
+            holderReNew.setText("");
         } else {
             if (inputReNewPassword.getText().toString().isEmpty()){
-                inputReNewPassword.setHint("");
+                holderReNew.setText("Re-Enter New Password");
             }
         }
     }
     @Override
     public void showHideOldPassword(boolean isActive) {
         if (isActive){
-            btEyeOle.setBackgroundResource(R.drawable.view);
+            btEyeOle.setBackgroundResource(R.drawable.eye_open);
             inputOldPassword.setInputType(InputType.TYPE_CLASS_TEXT);
         }
         else{
-            btEyeOle.setBackgroundResource(R.drawable.hide);
+            btEyeOle.setBackgroundResource(R.drawable.eye_off);
             inputOldPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         }
     }
     @Override
     public void showHideNewPassword(boolean isActive) {
         if (isActive){
-            btEyeNew.setBackgroundResource(R.drawable.view);
+            btEyeNew.setBackgroundResource(R.drawable.eye_open);
             inputNewPassword.setInputType(InputType.TYPE_CLASS_TEXT);
         }
         else{
-            btEyeNew.setBackgroundResource(R.drawable.hide);
+            btEyeNew.setBackgroundResource(R.drawable.eye_off);
             inputNewPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         }
     }
     @Override
     public void showHideReNewPassword(boolean isActive) {
         if (isActive){
-            btEyeReNew.setBackgroundResource(R.drawable.view);
+            btEyeReNew.setBackgroundResource(R.drawable.eye_open);
             inputReNewPassword.setInputType(InputType.TYPE_CLASS_TEXT);
         }
         else{
-            btEyeReNew.setBackgroundResource(R.drawable.hide);
+            btEyeReNew.setBackgroundResource(R.drawable.eye_off);
             inputReNewPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         }
     }
