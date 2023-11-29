@@ -23,6 +23,7 @@ public class ChangePasswordActivity extends AppCompatActivity implements ChangeP
     private ImageButton btEyeOle;
     private ImageButton btEyeNew;
     private ImageButton btEyeReNew;
+    private Button btSave;
     private TextView txtError ;
     private TextView holderOle ;
     private TextView holderNew ;
@@ -39,7 +40,7 @@ public class ChangePasswordActivity extends AppCompatActivity implements ChangeP
         btEyeOle = findViewById(R.id.eye1);
         btEyeNew = findViewById(R.id.eye2);
         btEyeReNew = findViewById(R.id.eye3);
-        Button btSave = findViewById(R.id.save);
+        btSave = findViewById(R.id.savechangeP);
         holderOle = findViewById(R.id.holderOld);
         holderNew = findViewById(R.id.holderNew);
         holderReNew = findViewById(R.id.holderReNew);
@@ -75,6 +76,7 @@ public class ChangePasswordActivity extends AppCompatActivity implements ChangeP
                 String newPassword = inputNewPassword.getText().toString();
                 String reNewPassword = inputReNewPassword.getText().toString();
                 changePasswordController.validatePassword(oldPassword,newPassword,reNewPassword);
+                btSave.setVisibility(View.VISIBLE);
             }
         });
         inputOldPassword.setOnFocusChangeListener(new View.OnFocusChangeListener() {
